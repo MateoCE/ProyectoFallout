@@ -11,7 +11,19 @@
 			array_push($diccionario, fgets($file));
 		}
 		fclose($file);
-		print_r($diccionario);
+		
+		//384 caracteres en total, 354 solo especiales (30 de las palabras)
+		//for de 360
+
+		$simbolos = ["|", "º", "!", "ª", "@", "·", "$", "%", "&", "¬", "/", "(", ")", "=", "?", "'", "¿", "¡", "[", "]", "{", "}", "-", "<",">", "*", "+"];
+
+		
+
+
+
+
+
+
 	?>
 </body>
 </html>
