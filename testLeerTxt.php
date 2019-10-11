@@ -8,8 +8,11 @@
 	//Leer archivo txt y guardar palabras en array.
 	$file = fopen("listaPalabras", "r");
 	$diccionario = [];
+	$contador=0;
 	while(!feof($file)){
 		array_push($diccionario, fgets($file));
+		$diccionario[$contador]= trim($diccionario[$contador]);
+		$contador++;
 	}
 	fclose($file);
 
@@ -40,7 +43,7 @@
 	//Creamos el string añadiendo 360 caracteres aleatorios + las 6 palabras aleatorias.
 	$contador=0;
 	$stringPrincipal="";
-	for ($i=0; $i < 354 ; $i++) {
+	for ($i=0; $i < 360 ; $i++) {
 		if (in_array($i, $listaPosiciones)) {
 			$stringPrincipal .= "<span style='color: red;'>".$palabrasRandom[$contador]."</span>";
 			$contador++;
@@ -48,6 +51,7 @@
 			$stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
 		}
 	}
+
 	echo $stringPrincipal;
 	?>
 </body>
