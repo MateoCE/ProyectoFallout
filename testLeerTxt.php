@@ -59,6 +59,107 @@
 	}
 	echo "$stringPrincipal";
 	?>
+
+	<table class="tg">
+  <tr>
+    <th class="tg-0lax">0x9430</th>
+    <th class="tg-0lax"></th>
+    <th class="tg-0lax">0x94F0</th>
+    <th class="tg-0lax"></th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x943C</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x94FC</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9440</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9508</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9454</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9514</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9460</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9520</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x946C</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x952C</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9478</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9538</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9484</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9544</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x9490</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9550</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x949C</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x955C</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94AB</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9568</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94B4</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9574</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94C0</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9580</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94CC</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x958C</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94DB</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x9598</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">0x94E4</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">0x95A4</td>
+    <td class="tg-0lax"></td>
+  </tr>
+</table>
+
 	<p id="prueba"></p>
+
 </body>
 </html>
