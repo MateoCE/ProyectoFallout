@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Proyecto Fallout</title>
+<LINK REL=StyleSheet HREF="CSS/cssfallout.css" TYPE="text/css">
 </head>
+
 <body>
 	<?php
 	//Leer archivo txt y guardar palabras en array.
@@ -27,6 +29,10 @@
 		}
 	}
 
+	//Seleccionamos la contrasena
+	$contrasena=$palabrasRandom[rand(0,count($palabrasRandom)-1)];
+	echo "<p id='contrasena'>$contrasena</p>";
+
 	//Seleccionamos 6 posiciones aleatorias sin solapar entre ellas con diferencia de un caracteres.
 	$contador=0;
 	$listaPosiciones=[];
@@ -45,14 +51,12 @@
 	$stringPrincipal="";
 	for ($i=0; $i < 360 ; $i++) {
 		if (in_array($i, $listaPosiciones)) {
-			$stringPrincipal .= "<span style='color: red;'>".$palabrasRandom[$contador]."</span>";
+			$stringPrincipal .= "<span id='palabra'style='color: red;'>".$palabrasRandom[$contador]."</span>";
 			$contador++;
 		}else{
 			$stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
 		}
 	}
-
-	echo $stringPrincipal;
 	?>
 </body>
 </html>
