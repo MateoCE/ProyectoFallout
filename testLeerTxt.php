@@ -3,9 +3,9 @@
 <head>
 <title>Proyecto Fallout</title>
 <LINK REL=StyleSheet HREF="CSS/cssfallout.css" TYPE="text/css">
+<script type="text/javascript" src="scriptFallout.js"></script>
 </head>
-
-<body>
+<body onload="htmlCargado()"> 
 	<?php
 	//Leer archivo txt y guardar palabras en array.
 	$file = fopen("listaPalabras", "r");
@@ -57,6 +57,8 @@
 			$stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
 		}
 	}
+	echo "$stringPrincipal";
 	?>
+	<p id="prueba"></p>
 </body>
 </html>
