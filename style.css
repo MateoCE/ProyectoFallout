@@ -1,0 +1,39 @@
+@mixin centered {
+  position:absolute;
+  margin:auto;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+}
+
+.tituloTerminal{
+	@include centered;
+	color: green;
+	position: relative;
+	left:250px;
+	top:-50px;
+}
+
+.textoTerminal{
+	color: green;
+	position: relative;
+	top:-30px;
+}
+
+.pantallaTerminal{
+	@include centered;
+	position: fixed;
+	top:300px;
+	left:550px;
+}
+
+table{
+	@include centered;
+	width: 100%;
+	color: green;
+}
+
+td{
+	align:justify;
+}
