@@ -1,0 +1,68 @@
+#main {max-width:960px; min-width:320px; margin:0 auto;}
+
+#contrasena, #bloque1,#bloque2{
+		visibility: hidden;
+		display: none;
+}
+body {
+	color: green;
+	background-image: url("../terminales/TerminalFallout.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	background-color: #66999;
+}
+#main{
+	text-align-last: justify;
+}
+#blok,#blok2,#bloqueFijo1,#bloqueFijo2{
+	font-family: Helvetica, sans-serif;
+	font-size: 19pt;
+}
+#titulo{
+	position:absolute;
+	left: 27%;
+	top: 12%;
+	font-family: Helvetica, sans-serif;
+	font-size: 19pt;
+	letter-spacing: 0.10em;
+}
+#blok{
+	position:absolute;
+	left: 32%;
+	bottom: 15.4%;
+	letter-spacing: 0.10em;
+}
+#blok2 {
+	position:absolute;
+	left: 49.5%;
+	bottom: 15.5%;
+
+	letter-spacing: 0.15em;
+
+}
+#bloqueFijo1 {
+	position: absolute;
+	left: 27%;
+	bottom: 18%;
+}
+#bloqueFijo2 {
+	position: absolute;
+	left: 44.5%;
+	bottom: 18%;
+
+}
+
+.tg  {
+	border-collapse:collapse;border-spacing:0;
+}
+.tg td{
+	font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;
+}
+.tg th{
+	font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;
+}
+.tg .tg-0lax{
+	text-align:left;vertical-align:top
+}
