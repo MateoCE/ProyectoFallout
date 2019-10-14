@@ -88,10 +88,10 @@ foreach($palabrasRandom as $palabra){
   if(!strpos($stringPrincipal,$palabra)){
     for ($i = 1; $i < strlen($palabra); $i++){
       $stringDiv = substr($palabra,0,$i)."<br>".substr($palabra,$i);
-      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' class='palabra'>$stringDiv</span>", $stringPrincipal);
+      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabra'>$stringDiv</span>", $stringPrincipal);
     }
   }else{
-    $stringPrincipal = str_replace($palabra, "<span id='$palabra' class='palabra'>$palabra</span>", $stringPrincipal);
+    $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabra'>$palabra</span>", $stringPrincipal);
   }
 }
 echo "<div id='main'><div id='bloque1'>".$stringPrincipal."</div></div>";
@@ -140,6 +140,8 @@ Attempts Remaining: </pre>
 0x5370<br/>
 0x0382<br/>
 0xD394
+</div>
+<div id="bloqueFijo3">
 </div>
 </body>
 </html>

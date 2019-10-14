@@ -13,4 +13,18 @@ function htmlCargado(){
 	var facil=  "[] ".repeat(contadorFacil);
 	var inte = facil;
 	document.getElementById('titulo').innerHTML += inte;
+
+
 }
+
+function comprovarContrasena(palabra){
+		var contrasenaScript = document.getElementById('contrasena').innerHTML;
+
+		if(palabra==contrasenaScript){
+			document.getElementById('bloqueFijo3').innerHTML+="contraseña "+palabra + " correcta!!!";
+		}else{
+			document.getElementById('bloqueFijo3').innerHTML+="contraseña "+palabra + " incorrecta!!!"+"<br/>";
+		}
+
+		
+	}
