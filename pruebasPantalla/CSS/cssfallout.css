@@ -18,25 +18,25 @@ body {
 }
 #blok,#blok2,#bloqueFijo1,#bloqueFijo2{
 	font-family: Helvetica, sans-serif;
-	font-size: 19pt;
+	font-size: 11.5pt;
 }
 #titulo{
 	position:absolute;
 	left: 27%;
 	top: 12%;
 	font-family: Helvetica, sans-serif;
-	font-size: 19pt;
+	font-size: 13pt;
 	letter-spacing: 0.10em;
 }
 #blok{
 	position:absolute;
-	left: 32%;
+	left: 32.3%;
 	bottom: 15.4%;
 	letter-spacing: 0.10em;
 }
 #blok2 {
 	position:absolute;
-	left: 49.5%;
+	left: 50.2%;
 	bottom: 15.5%;
 
 	letter-spacing: 0.15em;
