@@ -19,11 +19,18 @@ function htmlCargado(){
 
 function comprovarContrasena(palabra){
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
-
 		if(palabra==contrasenaScript){
-			document.getElementById('bloqueFijo3').innerHTML+="contraseña "+palabra + " correcta!!!";
+			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Correct password.";
 		}else{
-			document.getElementById('bloqueFijo3').innerHTML+="contraseña "+palabra + " incorrecta!!!"+"<br/>";
+			var contadorLetras=0;
+			for (var i = 0; i < palabra.length; i++) {
+				if (palabra[i]==contrasenaScript[i]) {
+					contadorLetras+=1;
+				}
+			}
+			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Entry denied."+"<br/>";
+			document.getElementById('bloqueFijo3').innerHTML+=">Likeness="+contadorLetras+"<br/>";
+
 		}
 
 		
