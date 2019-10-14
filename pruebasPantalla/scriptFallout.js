@@ -8,6 +8,9 @@ function htmlCargado(){
 	document.getElementById('blok2').innerHTML = segundoBloque;
 
 
-	var inte = "[] ".repeat(3);
+	
+	var contadorFacil= 4;
+	var facil=  "[] ".repeat(contadorFacil);
+	var inte = facil;
 	document.getElementById('titulo').innerHTML += inte;
 }

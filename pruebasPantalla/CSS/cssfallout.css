@@ -17,8 +17,12 @@ body {
 	text-align-last: justify;
 }
 #blok,#blok2,#bloqueFijo1,#bloqueFijo2{
-	font-family: Helvetica, sans-serif;
+	font-family: Courier New, sans-serif;
 	font-size: 11.5pt;
+}
+.palabra:hover {
+    background: green;
+    color:black;
 }
 #titulo{
 	position:absolute;
@@ -30,13 +34,13 @@ body {
 }
 #blok{
 	position:absolute;
-	left: 32.3%;
+	left: 32%;
 	bottom: 15.4%;
 	letter-spacing: 0.10em;
 }
 #blok2 {
 	position:absolute;
-	left: 50.2%;
+	left: 49.6%;
 	bottom: 15.5%;
 
 	letter-spacing: 0.15em;
@@ -50,7 +54,7 @@ body {
 #bloqueFijo2 {
 	position: absolute;
 	left: 44.5%;
-	bottom: 18%;
+	bottom: 17.6%;
 
 }
 
