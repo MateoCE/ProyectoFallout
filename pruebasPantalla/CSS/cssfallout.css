@@ -32,6 +32,14 @@ body {
 	font-size: 13pt;
 	letter-spacing: 0.10em;
 }
+#intentos{
+	position:absolute;
+	left: 27%;
+	top: 26%;
+	font-family: Helvetica, sans-serif;
+	font-size: 13pt;
+	letter-spacing: 0.10em;
+}
 #blok{
 	position:absolute;
 	left: 32%;

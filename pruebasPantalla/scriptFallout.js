@@ -9,13 +9,15 @@ function htmlCargado(){
 
 
 	
-	var contadorFacil= 4;
-	var facil=  "[] ".repeat(contadorFacil);
-	var inte = facil;
-	document.getElementById('titulo').innerHTML += inte;
+	
+	var contadorVidas= 4;
+	var Vidas=  "[] ".repeat(contadorVidas);
+	document.getElementById('intentos').innerHTML ="Attempts Remaining: "+ Vidas;
+
 
 
 }
+	var contadorVidas= 4;
 
 function comprovarContrasena(palabra){
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
@@ -30,6 +32,10 @@ function comprovarContrasena(palabra){
 			}
 			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Entry denied."+"<br/>";
 			document.getElementById('bloqueFijo3').innerHTML+=">Likeness="+contadorLetras+"<br/>";
+
+			contadorVidas=contadorVidas-1;
+			var Vidas=  "[] ".repeat(contadorVidas);
+			document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
 
 		}
 

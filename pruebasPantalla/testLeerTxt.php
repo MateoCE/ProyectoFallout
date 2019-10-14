@@ -100,9 +100,9 @@ echo "<div id='main'><div id='bloque1'>".$stringPrincipal."</div></div>";
 <pre id="titulo">
 Welcome to ROBCO Industries (TM) Termlink
 
-Password Required
+Password Required </pre>
 
-Attempts Remaining: </pre>
+<p id="intentos"></p>
 <p id="blok"></p>
 <p id="blok2"></p>
 <div id="bloqueFijo1">
