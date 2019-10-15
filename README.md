@@ -17,60 +17,38 @@ WINDOWS:
   xampp 
 
 	└───htdocs
-
 			└───ProyectoFallout
-
 					├───listaPalabras.txt
-
 					├───mainHTML.php
-
 					├───mainPHP.php
-
 					├───scriptFallout.js
-
 					├───README.md
-
 					│   
 					│
 					├───CSS
-
 					│    └───cssfallout.css
-
 					│
 					└───terminales
-
 					     └───TerminalFallout.png
 
 
 UBUNTU:
 
 var
-
  └──www
-
  	  └──html
-
  	   	   └─ProyectoFallout
-
 				├───listaPalabras.txt
-
 				├───mainHTML.php
-
 				├───mainPHP.php
-
 				├───scriptFallout.js
-
 				├───README.md
-
 				│   
 				│
 				├───CSS
-
 				│    └───cssfallout.css
-
 				│
 				└───terminales
-
 				     └───TerminalFallout.png
-				     
+
 
