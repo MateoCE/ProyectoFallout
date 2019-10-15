@@ -15,19 +15,29 @@ la distribución de las carpetas debe ser la siguiente:
 WINDOWS:
 
   xampp 
+
 	└───htdocs
+
 			└───ProyectoFallout
+
 					├───listaPalabras.txt
+
 					├───mainHTML.php
+
 					├───mainPHP.php
+
 					├───scriptFallout.js
+
 					├───README.md
-					│   
+										│   
 					│
 					├───CSS
+
 					│    └───cssfallout.css
+
 					│
 					└───terminales
+					
 					     └───TerminalFallout.png
 
 
@@ -50,7 +60,7 @@ var
 				├───scriptFallout.js
 
 				├───README.md
-								│   
+				│   
 				│
 				├───CSS
 
@@ -58,7 +68,7 @@ var
 
 				│
 				└───terminales
-				
+
 				     └───TerminalFallout.png
 
 
