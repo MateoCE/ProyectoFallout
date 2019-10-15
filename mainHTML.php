@@ -53,6 +53,7 @@ Password Required </pre>
 0xD394
 </div>
 <div id="bloqueFijo3">
+
 </div>
 </div>
 <script type="text/javascript" src="scriptFallout.js"></script>

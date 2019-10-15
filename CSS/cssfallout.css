@@ -1,16 +1,16 @@
-#main {max-width:960px; min-width:320px; margin:0 auto;}
+
 
 #contrasena{
 		visibility: hidden;
 		display: none;
 }
 body {
+	background-color: #292003;
 	color: green;
 	background-image: url("../terminales/TerminalFallout.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size:cover;
 }
 
 #bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
@@ -23,57 +23,74 @@ body {
 }
 #titulo{
 	position:absolute;
-	left: 27%;
-	top: 12%;
+	left: 6%;
+	top: 5%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
 }
 #intentos{
 	position:absolute;
-	left: 27%;
-	top: 26%;
+	left: 6%;
+	top: 21%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
 }
 #bloquepalabras1{
 	position:absolute;
-	left: 32%;
-	bottom: 18%;
+	left: 16%;
+	bottom: 13%;
 	letter-spacing: 0.10em;
 }
 #bloquepalabras2 {
 	position:absolute;
-	left: 49.6%;
-	bottom: 18%;
+	left: 47%;
+	bottom: 13%;
 	letter-spacing: 0.15em;
 }
 #bloqueFijo1 {
 	position: absolute;
-	left: 27%;
-	bottom: 18%;
+	left: 6%;
+	bottom: 13%;
 }
 #bloqueFijo2 {
 	position: absolute;
-	left: 44.5%;
-	bottom: 18%;
+	left: 37%;
+	bottom: 13%;
 
 }
 #bloqueFijo3{
 	position: absolute;
-	left: 61.5%;
-	bottom: 18%;
+	left: 70%;
+	bottom: 13%;
 
 }
 #victoria{
 	position: absolute;
-	left: 27%;
-	bottom: 19%;
+	left: 6%;
+	bottom: 10%;
 }
 #derrota{
 	position: absolute;
-	left: 42%;
+	left: 32%;
 	bottom: 48%;
 	font-size: 20pt;
+}
+#documento{
+	position: relative;
+	width: 665px;
+	height: 537px;
+	top: 55px;
+	margin: 0 auto;
+}
+@media only screen and (min-device-width:1000px) and (min-device-height:700px){
+	#documento{
+	position: relative;
+	width: 665px;
+	height: 537px;
+	top: 100px;
+	margin: 0 auto;
+}
+}
 }
