@@ -15,7 +15,6 @@ la distribución de las carpetas debe ser la siguiente:
 WINDOWS:
 
   xampp 
-
 	└───htdocs
 			└───ProyectoFallout
 					├───listaPalabras.txt
@@ -35,20 +34,31 @@ WINDOWS:
 UBUNTU:
 
 var
+
  └──www
+
  	  └──html
+
  	   	   └─ProyectoFallout
+
 				├───listaPalabras.txt
+
 				├───mainHTML.php
+
 				├───mainPHP.php
+
 				├───scriptFallout.js
+
 				├───README.md
-				│   
+								│   
 				│
 				├───CSS
+
 				│    └───cssfallout.css
+
 				│
 				└───terminales
+				
 				     └───TerminalFallout.png
 
 
