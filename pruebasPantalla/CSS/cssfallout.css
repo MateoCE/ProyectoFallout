@@ -66,3 +66,14 @@ body {
 	bottom: 18%;
 
 }
+#victoria{
+	position: absolute;
+	left: 27%;
+	bottom: 19%;
+}
+#derrota{
+	position: absolute;
+	left: 42%;
+	bottom: 48%;
+	font-size: 20pt;
+}

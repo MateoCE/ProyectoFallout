@@ -5,12 +5,14 @@ function comprovarContrasena(palabra){
 		//Comprobamos si es la contraseña
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabra==contrasenaScript){
-			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Correct password.";
+			document.getElementById('contenedorPrincipal').innerHTML="";
+			document.getElementById('mainPalabras').innerHTML="";
+			document.getElementById('victoria').innerHTML=">Correct password.";
 		//Si no es la contraseña entramos
 		}else{
 			//Restamos vida
 			contadorVidas=contadorVidas-1;
-			if (contadorVidas>=0) {
+			if (contadorVidas>0) {
 				var Vidas=  "[] ".repeat(contadorVidas);
 				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
 				
@@ -43,6 +45,10 @@ function comprovarContrasena(palabra){
 				document.getElementById(palabra).className="puntos";
 				//Cambiamos id de la plabra
 				document.getElementById(palabra).id=strPuntos;
+			}else{
+				document.getElementById('contenedorPrincipal').innerHTML="";
+				document.getElementById('mainPalabras').innerHTML="";
+				document.getElementById('derrota').innerHTML="Terminal closed"
 			}
 		}	
 	}

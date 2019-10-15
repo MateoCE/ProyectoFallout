@@ -9,6 +9,7 @@
 <?php
 require 'mainPHP.php';
 ?>
+<div id="contenedorPrincipal">
 <pre id="titulo">
 Welcome to ROBCO Industries (TM) Termlink
 
@@ -54,6 +55,10 @@ Password Required </pre>
 <div id="bloqueFijo3">
 </div>
 </div>
-</body>
 <script type="text/javascript" src="scriptFallout.js"></script>
+<div id="victoria"></div>
+<div id="derrota"></div>
+</div>
+
+</body>
 </html>
