@@ -15,7 +15,7 @@ Welcome to ROBCO Industries (TM) Termlink
 
 Password Required </pre>
 
-<p id="intentos"> Attempts Remaining: [] [] [] [] </p>
+<p id="intentos"> Attempts Remaining: &squf; &squf; &squf; &squf; </p>
 <div id="bloqueFijo1">
 0x0012<br/>
 0x0024<br/>
