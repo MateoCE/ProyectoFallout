@@ -13,39 +13,64 @@ Para añadir/eliminar las palabras que se usaran en el juego, modificar el archi
 la distribución de las carpetas debe ser la siguiente:
 
 WINDOWS:
+
   xampp 
+
 	└───htdocs
+
 			└───ProyectoFallout
+
 					├───listaPalabras.txt
+
 					├───mainHTML.php
+
 					├───mainPHP.php
+
 					├───scriptFallout.js
+
 					├───README.md
+
 					│   
 					│
 					├───CSS
+
 					│    └───cssfallout.css
+
 					│
 					└───terminales
+
 					     └───TerminalFallout.png
 
 
 UBUNTU:
 
 var
+
  └──www
+
  	  └──html
+
  	   	   └─ProyectoFallout
+
 				├───listaPalabras.txt
+
 				├───mainHTML.php
+
 				├───mainPHP.php
+
 				├───scriptFallout.js
+
 				├───README.md
+
 				│   
 				│
 				├───CSS
+
 				│    └───cssfallout.css
+
 				│
 				└───terminales
+
 				     └───TerminalFallout.png
+				     
 
