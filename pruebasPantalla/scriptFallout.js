@@ -1,52 +1,56 @@
-function htmlCargado(){
-	var contrasenaScript = document.getElementById('contrasena').innerHTML;
-	var primerBloque = document.getElementById('bloque1').innerHTML;
-	var segundoBloque = document.getElementById('bloque2').innerHTML;
-	segundoBloque += ")=(·";
-	segundoBloque = segundoBloque.replace(segundoBloque.substr(0,4), "", segundoBloque);
-	document.getElementById('blok').innerHTML = primerBloque;
-	document.getElementById('blok2').innerHTML = segundoBloque;
-	
-	var contadorVidas= 4;
-	var Vidas=  "[] ".repeat(contadorVidas);
-	document.getElementById('intentos').innerHTML ="Attempts Remaining: "+ Vidas;
-}
-
-
 var contadorVidas= 4;
 function comprovarContrasena(palabra){
-		var primerBloque = document.getElementById('bloque1').innerHTML;
-		var segundoBloque = document.getElementById('bloque2').innerHTML;
+	//Comprobamos si el ID son puntos
+	if (palabra[0]!=".") {
+		//Comprobamos si es la contraseña
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabra==contrasenaScript){
 			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Correct password.";
+		//Si no es la contraseña entramos
 		}else{
-			console.log("asasas")
-			var contadorLetras=0;
-			for (var i = 0; i < palabra.length; i++) {
-				if (palabra[i]==contrasenaScript[i]) {
-					contadorLetras+=1;
-				}
-			}
-			document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Entry denied."+"<br/>"+">Likeness="+contadorLetras+"<br/>";
+			//Restamos vida
 			contadorVidas=contadorVidas-1;
-			var Vidas=  "[] ".repeat(contadorVidas);
-			document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
-
-			//Puntos
-			var stringHTMLcompleto = document.getElementById(palabra);
-			var strSoloConBr = stringHTMLcompleto.innerHTML;
-			var strPuntos = "";
-			for (var i = 0; i < strSoloConBr.length; i++) {
-				if (strSoloConBr[i]=="<") {
-					strPuntos+="<br/>";
-					i+=3;
-				}else{
-					strPuntos+=".";
+			if (contadorVidas>=0) {
+				var Vidas=  "[] ".repeat(contadorVidas);
+				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
+				
+				//Contador coincidencias comparando con la contraseña
+				var contadorLetras=0;
+				for (var i = 0; i < palabra.length; i++) {
+					if (palabra[i]==contrasenaScript[i]) {
+						contadorLetras+=1;
+					}
 				}
 
+				//Actualizamos prompt con nombre de palabra clickada y coincidencias
+				document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Entry denied."+"<br/>"+">Likeness="+contadorLetras+"<br/>";
+					
+				//Creamos string con puntos y <br> si es necesario
+				var strSoloConBr = document.getElementById(palabra).innerHTML;
+				var strPuntos = "";
+				for (var i = 0; i < strSoloConBr.length; i++) {
+					if (strSoloConBr[i]=="<") {
+						strPuntos+="<br/>";
+						i+=3;
+					}else{
+						strPuntos+=".";
+					}
+				}
+
+				//Cambiamos la palabra clickada por puntos
+				document.getElementById(palabra).innerHTML=strPuntos;
+				//Cambiamos clase de la palabra
+				document.getElementById(palabra).className="puntos";
+				//Cambiamos id de la plabra
+				document.getElementById(palabra).id=strPuntos;
 			}
-			console.log(strPuntos)
-			stringHTMLcompleto.innerHTML = strPuntos;
-		}
+		}	
 	}
+}
+
+
+
+
+var anadirFinal = document.getElementById('bloquepalabras2').innerHTML.slice(0, 4);
+document.getElementById('bloquepalabras2').innerHTML=document.getElementById('bloquepalabras2').innerHTML.slice(4, document.getElementById('bloquepalabras2').innerHTML.length);
+document.getElementById('bloquepalabras2').innerHTML+=anadirFinal;

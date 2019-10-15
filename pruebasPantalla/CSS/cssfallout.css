@@ -1,6 +1,6 @@
 #main {max-width:960px; min-width:320px; margin:0 auto;}
 
-#contrasena, #bloque1,#bloque2{
+#contrasena{
 		visibility: hidden;
 		display: none;
 }
@@ -11,16 +11,13 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size:cover;
-	background-color: #66999;
 }
-#main{
-	text-align-last: justify;
-}
-#blok,#blok2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
+
+#bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
 	font-family: Courier New, sans-serif;
 	font-size: 11.5pt;
 }
-.palabra:hover {
+.palabras:hover {
     background: green;
     color:black;
 }
@@ -40,19 +37,17 @@ body {
 	font-size: 13pt;
 	letter-spacing: 0.10em;
 }
-#blok{
+#bloquepalabras1{
 	position:absolute;
 	left: 32%;
 	bottom: 15.4%;
 	letter-spacing: 0.10em;
 }
-#blok2 {
+#bloquepalabras2 {
 	position:absolute;
 	left: 49.6%;
 	bottom: 15.5%;
-
 	letter-spacing: 0.15em;
-
 }
 #bloqueFijo1 {
 	position: absolute;
@@ -70,17 +65,4 @@ body {
 	left: 61.5%;
 	bottom: 18%;
 
-}
-
-.tg  {
-	border-collapse:collapse;border-spacing:0;
-}
-.tg td{
-	font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;
-}
-.tg th{
-	font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;
-}
-.tg .tg-0lax{
-	text-align:left;vertical-align:top
 }
