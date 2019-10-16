@@ -84,13 +84,59 @@ body {
 	top: 55px;
 	margin: 0 auto;
 }
-@media only screen and (min-device-width:1000px) and (min-device-height:700px){
+@media only screen and (max-device-height:768px){
+		#documento{
+		position: relative;
+		width: 665px;
+		height: 537px;
+		top: 130px;
+		margin: 0 auto;
+	}
+}
+
+
+@media only screen and (max-device-height:1080px){
 	#documento{
-	position: relative;
-	width: 665px;
-	height: 537px;
-	top: 100px;
-	margin: 0 auto;
+		top: 265px;
+		
+
+	}
+
+@media only screen and (max-device-height:1024px){
+	#documento{
+		top: 115px;
+		
+
+	}
+
+@media only screen and (max-device-height:680px){
+	#documento{
+		top: 55px;
+		
+
+	}
+
+@media only screen and (max-device-height:650px){
+	#documento{
+		top: 35px;
+		
+
+	}
+
+@media only screen and (max-device-height:600px){
+	#documento{
+		top: 20px;
+		
+
+	}
+	
 }
-}
+
+@media only screen and (max-device-height:510px){
+	#documento{
+		top: 0px;
+		
+
+	}
+	
 }
