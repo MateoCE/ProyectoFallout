@@ -81,7 +81,7 @@ body {
 	position: relative;
 	width: 665px;
 	height: 537px;
-	top: 55px;
+	top: 40px;
 	margin: 0 auto;
 }
 @media only screen and (max-device-height:768px){
@@ -104,7 +104,7 @@ body {
 
 @media only screen and (max-device-height:1024px){
 	#documento{
-		top: 115px;
+		top: 70px;
 		
 
 	}
