@@ -1,4 +1,11 @@
 var contadorVidas= 4;
+function pedirNombre(){
+	var nombre = prompt("Introduce tu nombre");
+	if (nombre == null || nombre == ""){
+		nombre = "Jugador";
+		}
+	return nombre;	
+}
 function comprovarContrasena(palabra){
 	//Comprobamos si el ID son puntos
 	if (palabra[0]!=".") {
@@ -8,6 +15,9 @@ function comprovarContrasena(palabra){
 			document.getElementById('contenedorPrincipal').innerHTML="";
 			document.getElementById('mainPalabras').innerHTML="";
 			document.getElementById('victoria').innerHTML=">Correct password.";
+			nombreJugador=pedirNombre();
+
+
 		//Si no es la contraseña entramos
 		}else{
 			//Restamos vida
