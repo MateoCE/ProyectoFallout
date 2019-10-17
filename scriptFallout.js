@@ -70,3 +70,28 @@ function comprovarContrasena(palabra){
 var anadirFinal = document.getElementById('bloquepalabras2').innerHTML.slice(0, 4);
 document.getElementById('bloquepalabras2').innerHTML=document.getElementById('bloquepalabras2').innerHTML.slice(4, document.getElementById('bloquepalabras2').innerHTML.length);
 document.getElementById('bloquepalabras2').innerHTML+=anadirFinal;
+
+
+var segundos = 0;
+var minutos = 0;
+var marcador = document.getElementById("tiempo");
+window.setInterval(function(){
+ 	segundos++;
+ 	if (segundos<10) {
+ 		if (minutos<10) {
+ 			marcador.innerHTML = "0"+minutos+":0"+segundos;
+ 		}else{
+			marcador.innerHTML = minutos+":0"+segundos;
+ 		}
+ 	}else{
+ 		if (minutos<10) {
+ 			marcador.innerHTML = "0"+minutos+":"+segundos;
+ 		}else{
+			marcador.innerHTML = minutos+":"+segundos;
+ 		}
+ 	}
+ 	if (segundos==59) {
+ 		minutos++;
+ 		segundos=-1;
+ 	}
+},1000);
