@@ -53,13 +53,12 @@ Password Required </pre>
 0xD394
 </div>
 <div id="bloqueFijo3">
-
 </div>
+<div id="tiempo">00:00</div>
 </div>
-<script type="text/javascript" src="scriptFallout.js"></script>
 <div id="victoria"></div>
 <div id="derrota"></div>
 </div>
-
+<script type="text/javascript" src="scriptFallout.js"></script>
 </body>
 </html>
