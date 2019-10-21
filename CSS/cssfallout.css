@@ -12,7 +12,7 @@ body {
 }
 
 #bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
-	font-family: Courier New, sans-serif;
+	font-family: COurier New, sans-serif;
 	font-size: 11.5pt;
 }
 .palabras:hover {
@@ -88,62 +88,154 @@ body {
 	position: relative;
 	width: 665px;
 	height: 537px;
-	top: 40px;
 	margin: 0 auto;
 }
 
-@media only screen and (max-device-height:768px){
-		#documento{
-		position: relative;
-		width: 665px;
-		height: 537px;
-		top: 130px;
-		margin: 0 auto;
+@media only screen and (max-width: 600px) {
+	body{
+		background-image: url(../terminales/error404.jpg);
+		background-size: cover;
+		color: black;
+	}
+	#bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3,#tiempo,#titulo,#intentos{
+		font: 0/0 a;
+  		text-shadow: transparent;
+  		color: transparent;
+  		text-decoration: none;
+	}
+}
+@media (max-height: 1280px) and (min-width: 600px){
+	#documento{
+		top: 360px;
+	}
+}
+@media (max-height: 1240px) and (min-width: 600px){
+	#documento{
+		top: 340px;
+	}
+}
+@media (max-height: 1200px) and (min-width: 600px){
+	#documento{
+		top: 320px;
+	}
+}
+@media(max-height: 1160px) and (min-width: 600px){
+	#documento{
+		top: 300px;
+	}
+}
+@media (max-height: 1120px) and (min-width: 600px){
+	#documento{
+		top: 280px;
+	}
+}
+@media(max-height: 1080px) and (min-width: 600px){
+	#documento{
+		top: 270px;
+	}
+}
+@media (max-height: 1040px) and (min-width: 600px){
+	#documento{
+		top: 250px;
+	}
+}
+@media (max-height: 1000px) and (min-width: 600px){
+	#documento{
+		top: 230px;
+	}
+}
+@media (max-height: 960px) and (min-width: 600px){
+	#documento{
+		top: 210px;
+	}
+}
+@media (max-height: 920px) and (min-width: 600px){
+	#documento{
+		top: 190px;
+	}
+}
+@media (max-height: 880px) and (min-width: 600px){
+	#documento{
+		top: 170px;
+	}
+}
+@media (max-height: 849px) and (min-width: 600px){
+	#documento{
+		top: 150px;
 	}
 }
 
-
-@media only screen and (max-device-height:1080px){
+@media (max-height: 800px) and (min-width: 600px){
 	#documento{
-		top: 265px;
+		top: 140px;
+	}
+}
+@media (max-height: 760px) and (min-width: 600px){
+	#documento{
+		top: 120px;
+	}
+}
+@media (max-height: 720px) and (min-width: 600px){
+	#documento{
+		top: 100px;
+	}
+}
+@media (max-height: 680px) and (min-width: 600px){
+	#documento{
+		top: 80px;
+	}
+}
+@media (max-height: 640px) and (min-width: 600px){
+	#documento{
+		top: 60px;
+	}
 }
 
-@media only screen and (max-device-height:1024px){
+@media (max-height: 600px) and (min-width: 600px){
 	#documento{
-		top: 70px;
-		
-
+		top: 40px;
 	}
-
-@media only screen and (max-device-height:680px){
-	#documento{
-		top: 55px;
-		
-
-	}
-
-@media only screen and (max-device-height:650px){
-	#documento{
-		top: 35px;
-		
-
-	}
-
-@media only screen and (max-device-height:600px){
+}
+@media (max-height: 560px) and (min-width: 600px){
 	#documento{
 		top: 20px;
-		
-
 	}
-	
 }
-
-@media only screen and (max-device-height:510px){
+@media (max-height: 520px) and (min-width: 600px){
 	#documento{
 		top: 0px;
-		
-
 	}
-	
 }
-
+@media  (max-height: 480px) and (min-width: 600px){
+	#documento{
+		top: -20px;
+	}
+}
+@media (max-height: 460px) and (min-width: 600px){
+	#documento{
+		top: -40px;
+	}
+}
+@media (max-height: 440px) and (min-width: 600px){
+	#documento{
+		top: -70px;
+	}
+}
+@media (max-height: 430px) and (min-width: 600px){
+	#documento{
+		top: -90px;
+	}
+}
+@media (max-height: 359px){
+	body{
+		background-image: url(../terminales/error404.jpg);
+		background-size: cover;
+		color: black;
+	}
+	#bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3,#tiempo,#titulo,#intentos{
+		font: 0/0 a;
+  		text-shadow: transparent;
+  		color: transparent;
+  		text-decoration: none;
+	}
+}
