@@ -1,4 +1,12 @@
 var contadorVidas= 4;
+
+function javascript_to_php(name, time, tries) {
+	var jsName = name;
+	var jsTime = time;
+	var jsTries = tries;
+	document.getElementById("variablesRanking").value = name+";"+tries+";"+time+"<br>";
+}
+
 function pedirNombre(){
 	var nombre = prompt("Introduce tu nombre");
 	if (nombre == null || nombre == ""){
@@ -16,6 +24,9 @@ function comprovarContrasena(palabra){
 			document.getElementById('mainPalabras').innerHTML="";
 			document.getElementById('victoria').innerHTML=">Correct password.";
 			nombreJugador=pedirNombre();
+
+			javascript_to_php(nombreJugador, puntuacionSegundos, contadorVidas);
+
 
 
 		//Si no es la contraseña entramos

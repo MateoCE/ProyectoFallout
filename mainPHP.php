@@ -87,4 +87,14 @@ foreach($palabrasRandom as $palabra){
   }
 }
 echo "<div id='mainPalabras'><div id='bloquepalabras1'>".$stringPrincipal."</div></div>";
+
+echo "PRUEBA";
+if(isset($_POST["variablesRanking"])){
+  $variablesR = $_POST["variablesRanking"];
+  $fileranking = fopen("ranking", "w");
+  fwrite($fileranking, $variablesR);
+  fclose($fileranking);
+  echo $variablesR;
+  echo "PRUEBA";
+
 ?>

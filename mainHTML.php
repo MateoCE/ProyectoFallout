@@ -59,6 +59,10 @@ Password Required </pre>
 <div id="victoria"></div>
 <div id="derrota"></div>
 </div>
+<div id="formularioculto">
+	<form action="mainPHP.php" method="POST">
+	<input type="hidden" name="variablesRanking" id="variablesRanking" value="">
+</div>
 <script type="text/javascript" src="scriptFallout.js"></script>
 </body>
 </html>
