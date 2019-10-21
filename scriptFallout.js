@@ -4,7 +4,7 @@ function javascript_to_php(name, time, tries) {
 	var jsName = name;
 	var jsTime = time;
 	var jsTries = tries;
-	document.getElementById("variablesRanking").value = name+";"+tries+";"+time+"<br>";
+	window.location.href = window.location.href + "?name=" + jsName + "&time=" + jsTime + "&tries=" + jsTries ;
 }
 
 function pedirNombre(){
@@ -85,8 +85,10 @@ document.getElementById('bloquepalabras2').innerHTML+=anadirFinal;
 
 var segundos = 0;
 var minutos = 0;
+var puntuacionSegundos = 0;
 var marcador = document.getElementById("tiempo");
 window.setInterval(function(){
+	puntuacionSegundos++;
  	segundos++;
  	if (segundos<10) {
  		if (minutos<10) {

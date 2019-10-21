@@ -37,14 +37,13 @@ WINDOWS:
 
 					│
 					└───terminales
-					
+
 					     └───TerminalFallout.png
 
 
 UBUNTU:
 
 var
-
  └──www
 
  	  └──html
