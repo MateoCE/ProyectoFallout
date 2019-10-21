@@ -22,7 +22,7 @@ function comprovarContrasena(palabra){
 		if(palabra==contrasenaScript){
 			document.getElementById('contenedorPrincipal').innerHTML="";
 			document.getElementById('mainPalabras').innerHTML="";
-			document.getElementById('victoria').innerHTML=">Correct password.";
+			document.getElementById('victoria').style.display="block";
 			nombreJugador=pedirNombre();
 
 			javascript_to_php(nombreJugador, puntuacionSegundos, contadorVidas);
@@ -69,7 +69,7 @@ function comprovarContrasena(palabra){
 			}else{
 				document.getElementById('contenedorPrincipal').innerHTML="";
 				document.getElementById('mainPalabras').innerHTML="";
-				document.getElementById('derrota').innerHTML="Terminal closed"
+				document.getElementById('derrota').style.display="block";
 			}
 		}	
 	}

@@ -56,8 +56,8 @@ Password Required </pre>
 </div>
 <div id="tiempo">00:00</div>
 </div>
-<div id="victoria"></div>
-<div id="derrota"></div>
+<div id="victoria" style="display: none"><img src="terminales/gifVictoria.gif"></div>
+<div id="derrota" style="display: none"><img src="terminales/perder.png" style="width: 600px"></div>
 </div>
 <div id="formularioculto">
 	<form action="mainPHP.php" method="POST">
