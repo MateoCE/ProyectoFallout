@@ -6,6 +6,7 @@
 </head>
 <body>
 <div id="documento">
+	<div id="cascada" class="screen"></div>
 <?php
 require 'mainPHP.php';
 ?>
