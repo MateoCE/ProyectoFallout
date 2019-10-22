@@ -96,7 +96,7 @@ body {
 	border-style: solid;
   	border-width: 1px;
   	color:green;
-  	
+
 	font-weight: 700;
 }
 #documento{
@@ -256,9 +256,8 @@ body {
 }
 
 .screen {
-  animation:colorPulse 5s infinite ease-in-out;
+  animation:colorPulse 6s infinite ease-in-out;
   box-sizing:border-box;
-  font-family:'Fira Mono', monospace;
   font-size:20px;
   height:100vh;
   overflow:hidden;
@@ -267,11 +266,11 @@ body {
 }
 
 .screen:before {
-  animation:wave 10s infinite ease-in-out;
+  animation:wave 6s infinite ease-in-out;
   content:"";
   height:20vh;
   left:0;
-  opacity:.5;
+  opacity:1;
   position:absolute;
   right:0;
   z-index:1;
