@@ -47,7 +47,7 @@
 					echo "<td>$contador</td>";
 					echo "<td>$row[0]</td>";
 					echo "<td>$row[2]</td>";
-					echo "<td>$row[1]</td>";
+					echo "<td>$row[1]s</td>";
 			    echo "<tr/>";
 			}
 		?>

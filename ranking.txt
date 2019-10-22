@@ -4,3 +4,4 @@ Joel;4;2
 Raul;17;1
 Joel;3;2
 Mateo;14;4
+Joel;12;4
