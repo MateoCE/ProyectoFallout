@@ -6,3 +6,5 @@ Oscar;13;3
 Oscar;36;4
 Oscar;4;1
 Oscaaar;2;4
+Mateo;12;4
+Mateo;14;4
