@@ -22,6 +22,7 @@ body {
 #bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
 	font-family: COurier New, sans-serif;
 	font-size: 11.5pt;
+	font-weight: 700;
 }
 .palabras:hover {
     background: green;
@@ -34,6 +35,8 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
+
+	font-weight: 700;
 }
 #intentos{
 	position:absolute;
@@ -42,6 +45,8 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
+
+	font-weight: 700;
 }
 #bloquepalabras1{
 	position:absolute;
@@ -91,6 +96,8 @@ body {
 	border-style: solid;
   	border-width: 1px;
   	color:green;
+  	
+	font-weight: 700;
 }
 #documento{
 	position: relative;
