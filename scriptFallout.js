@@ -1,10 +1,10 @@
 var contadorVidas= 4;
 
-function javascript_to_php(name, time, tries) {
-	var jsName = name;
-	var jsTime = time;
-	var jsTries = tries;
-	window.location.href = window.location.href + "?name=" + jsName + "&time=" + jsTime + "&tries=" + jsTries ;
+function enviarDatos() {
+	var jsName = nombreJugador;
+	var jsTime = puntuacionSegundos;
+	var jsTries = contadorVidas;
+	window.location.href = "menuPrincipal.php" + "?name=" + jsName + "&time=" + jsTime + "&tries=" + jsTries ;
 }
 
 function pedirNombre(){
@@ -31,8 +31,6 @@ function comprovarContrasena(palabra){
 			document.getElementById('mainPalabras').innerHTML="";
 			document.getElementById('victoria').style.display="block";
 			nombreJugador=pedirNombre();
-
-			javascript_to_php(nombreJugador, puntuacionSegundos, contadorVidas);
 
 
 

@@ -88,17 +88,4 @@ foreach($palabrasRandom as $palabra){
 }
 echo "<div id='mainPalabras'><div id='bloquepalabras1'>".$stringPrincipal."</div></div>";
 
-
-  if (isset($_GET["name"]) && isset($_GET["time"]) && isset($_GET["tries"])) {
-    $phpName = $_GET["name"];
-    $phpTime = $_GET["time"];
-    $phpTries = $_GET["tries"];
- 
-    $variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
-
-    file_put_contents("ranking.txt", $variables, FILE_APPEND | LOCK_EX);
-
-    //header("location: menuPrincipal.php");
-
-  }
 ?>

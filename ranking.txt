@@ -1,7 +1,8 @@
-Mateo;10;3
-Oscar;11;2
-Joel;4;2
-Raul;17;1
-Joel;3;2
-Mateo;14;4
-Joel;12;4
+Oscar;9;4
+Oscar;2;4
+Jugador;1;4
+jhujh;3;2
+Oscar;13;3
+Oscar;36;4
+Oscar;4;1
+Oscaaar;2;4
