@@ -14,6 +14,13 @@ function pedirNombre(){
 		}
 	return nombre;	
 }
+
+function irMenuPrincipal(){
+
+	window.location.href = ("menuPrincipal.php")
+
+}
+
 function comprovarContrasena(palabra){
 	//Comprobamos si el ID son puntos
 	if (palabra[0]!=".") {

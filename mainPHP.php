@@ -98,7 +98,7 @@ echo "<div id='mainPalabras'><div id='bloquepalabras1'>".$stringPrincipal."</div
 
     file_put_contents("ranking.txt", $variables, FILE_APPEND | LOCK_EX);
 
-    header("location: menuPrincipal.php");
+    //header("location: menuPrincipal.php");
 
   }
 ?>
