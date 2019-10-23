@@ -10,7 +10,21 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
-
+.prompt{
+	width: 170px;
+	height: 54px;
+}
+.blink {
+        animation: blinker 0.5s linear infinite;
+}
+@keyframes blinker {  
+	100%{
+		opacity: 100%
+	}
+    0%{ 
+    opacity: 0; 
+}
+}
 #cascada{
 	position: absolute;
 	width: 86%;
@@ -30,12 +44,11 @@ body {
 }
 #titulo{
 	position:absolute;
-	left: 6%;
+	left: -6%;
 	top: 5%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
-
 	font-weight: 700;
 }
 #intentos{
@@ -74,7 +87,7 @@ body {
 #bloqueFijo3{
 	position: absolute;
 	left: 70%;
-	bottom: 13%;
+	bottom: 13.5%;
 
 }
 #victoria{

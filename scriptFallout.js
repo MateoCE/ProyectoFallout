@@ -1,4 +1,4 @@
-var contadorVidas= 4;
+var contadorVidas=4;
 
 function enviarDatos() {
 	var jsName = nombreJugador;
@@ -32,14 +32,12 @@ function comprovarContrasena(palabra){
 			document.getElementById('victoria').style.display="block";
 			nombreJugador=pedirNombre();
 
-
-
 		//Si no es la contraseña entramos
 		}else{
 			//Restamos vida
 			contadorVidas=contadorVidas-1;
 			if (contadorVidas>0) {
-				var Vidas=  "&squf; ".repeat(contadorVidas);
+				var Vidas=  "&block; ".repeat(contadorVidas);
 				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
 				
 				//Contador coincidencias comparando con la contraseña
@@ -49,10 +47,13 @@ function comprovarContrasena(palabra){
 						contadorLetras+=1;
 					}
 				}
-
 				//Actualizamos prompt con nombre de palabra clickada y coincidencias
-				document.getElementById('bloqueFijo3').innerHTML+=">"+palabra+"<br/>"+">Entry denied."+"<br/>"+">Likeness="+contadorLetras+"<br/>";
-					
+				document.getElementById('prompt5').innerHTML=document.getElementById('prompt4').innerHTML;
+				document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
+				document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
+				document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
+				document.getElementById('prompt1').innerHTML=">"+palabra+"<br/>"+">Entry denied."+"<br/>"+">Likeness="+contadorLetras+"<br/>";
+				
 				//Creamos string con puntos y <br> si es necesario
 				var strSoloConBr = document.getElementById(palabra).innerHTML;
 				var strPuntos = "";
