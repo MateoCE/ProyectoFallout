@@ -16,3 +16,5 @@ OSCAR;11;3
 Jugador;4;4
 Jugador;32;4
 Jugador;8;3
+reg;72;3
+Jugador;26;2

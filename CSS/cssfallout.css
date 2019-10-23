@@ -42,6 +42,10 @@ body {
     background: green;
     color:black;
 }
+.ayudas:hover {
+    background: green;
+    color:black;
+}
 #titulo{
 	position:absolute;
 	left: -6%;

@@ -21,6 +21,59 @@ function irMenuPrincipal(){
 
 }
 
+function vidasRestantes(simbolo){
+	if(simbolo=="-"){
+		contadorVidas=contadorVidas-1;
+			if (contadorVidas>0) {
+				var Vidas=  "&block; ".repeat(contadorVidas);
+				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
+			}else{
+				document.getElementById('contenedorPrincipal').innerHTML="";
+				document.getElementById('mainPalabras').innerHTML="";
+				document.getElementById('derrota').style.display="block";
+			}
+	}else if(simbolo=="+"){
+		var Vidas=  "&block; ".repeat(contadorVidas);
+				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
+	}
+}
+
+function borrarPalabra(){
+	var palabrasAyuda = document.getElementsByClassName('palabras');
+	var arrayPalabras = [];
+	for (var i = 0; i < palabrasAyuda.length; i++) {
+		var contrasenaScript = document.getElementById('contrasena').innerHTML;
+		if(palabrasAyuda[i].innerHTML!=contrasenaScript){
+			arrayPalabras.push(palabrasAyuda[i].innerHTML);
+		}
+	}
+
+	var numAleatorio=Math.floor(Math.random()*arrayPalabras.length-1);
+
+	var palabraEliminar=arrayPalabras[numAleatorio];
+	arrayPalabras.splice(numAleatorio,1);
+
+	//Creamos string con puntos y <br> si es necesario
+	var strSoloConBr = document.getElementById(palabraEliminar).innerHTML;
+	var strPuntos = "";
+	for (var i = 0; i < strSoloConBr.length; i++) {
+		if (strSoloConBr[i]=="<") {
+			strPuntos+="<br/>";
+			i+=3;
+		}else{
+			strPuntos+=".";
+		}
+	}
+
+				//Cambiamos la palabra clickada por puntos
+	document.getElementById(palabraEliminar).innerHTML=strPuntos;
+				//Cambiamos clase de la palabra
+	document.getElementById(palabraEliminar).className="puntos";
+				//Cambiamos id de la plabra
+	document.getElementById(palabraEliminar).id=strPuntos;
+
+}
+
 function comprovarContrasena(palabra){
 	//Comprobamos si el ID son puntos
 	if (palabra[0]!=".") {
@@ -35,10 +88,7 @@ function comprovarContrasena(palabra){
 		//Si no es la contraseña entramos
 		}else{
 			//Restamos vida
-			contadorVidas=contadorVidas-1;
-			if (contadorVidas>0) {
-				var Vidas=  "&block; ".repeat(contadorVidas);
-				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
+			vidasRestantes("-");
 				
 				//Contador coincidencias comparando con la contraseña
 				var contadorLetras=0;
@@ -72,17 +122,29 @@ function comprovarContrasena(palabra){
 				document.getElementById(palabra).className="puntos";
 				//Cambiamos id de la plabra
 				document.getElementById(palabra).id=strPuntos;
-			}else{
-				document.getElementById('contenedorPrincipal').innerHTML="";
-				document.getElementById('mainPalabras').innerHTML="";
-				document.getElementById('derrota').style.display="block";
-			}
 		}	
 	}
 }
 
+function ayudas(ayuda){
+	if (ayuda[0]!=".") {
+	if(Math.random()<0.5){
+		restablecerIntentos();
+	}else{
+		borrarPalabra();
+	}
 
+	var strAyuda = document.getElementById(ayuda).innerHTML;
+	var strPuntos = "";
+	for (var i = 0; i < strAyuda.length; i++) {
+		strPuntos+=".";
+	}
 
+	document.getElementById(ayuda).innerHTML=strPuntos;
+	document.getElementById(ayuda).className="puntos";
+	document.getElementById(ayuda).id=strPuntos;
+}	
+}
 
 var anadirFinal = document.getElementById('bloquepalabras2').innerHTML.slice(0, 4);
 document.getElementById('bloquepalabras2').innerHTML=document.getElementById('bloquepalabras2').innerHTML.slice(4, document.getElementById('bloquepalabras2').innerHTML.length);
@@ -114,3 +176,10 @@ window.setInterval(function(){
  		segundos=-1;
  	}
 },1000);
+
+
+function restablecerIntentos() {
+        contadorVidas = 4;
+        vidasRestantes("+");
+        
+    }

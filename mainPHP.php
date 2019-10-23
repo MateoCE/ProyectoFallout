@@ -51,9 +51,9 @@ while (count($arrayAyudas) < 3) {
     array_push($arrayAyudas, $ayuda);
 }
 
-// echo $arrayAyudas[0];
-// echo $arrayAyudas[1];
-// echo $arrayAyudas[2];
+echo $arrayAyudas[0];
+echo $arrayAyudas[1];
+echo $arrayAyudas[2];
 
 
 //Creamos string con palabras y simbolos
@@ -95,8 +95,10 @@ for ($pos=0; $pos <strlen($stringPrincipal); $pos++){
   }
 }
 
+
 //Anadimos spans a las ayudas
-$arrayAyudas = ["[/&]","{!=@@}","(=%&)"];
+$stringPrincipal.=$arrayAyudas[0];
+
 foreach ($arrayAyudas as $ayuda) {
   $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas'>$ayuda</span>", $stringPrincipal);
 }
