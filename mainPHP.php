@@ -22,7 +22,9 @@ while ($contador<6) {
   }
 }
 
-$simbolos=[",","`","!","?","\\","|","/",":","+","[","]", "=", "{", "}","@","#","$","%","^","*","(",")"];
+$simbolos=[",","`","!","?","\\","|","/",":","+", "=", "@","#","$","%","^","*"];
+$simbolosOpertura = ["(", "[", "{"];
+$simbolosCierre = [")", "]", "}"];
 
 //6 posiciones aleatorias sin solapar
 $contador=0;
@@ -36,6 +38,24 @@ $listaPosiciones=[];
         }
     }
 }
+
+$arrayAyudas = [];
+while (count($arrayAyudas) < 3) {
+    $randomLength = rand(1, 10);
+    $eleccionSimbolo = rand(0, count($simbolosOpertura) - 1);
+    $ayuda = "";
+    while (strlen($ayuda) < $randomLength) {
+        $ayuda .= $simbolos[rand(0, count($simbolos) - 1)];
+    }
+    $ayuda = $simbolosOpertura[$eleccionSimbolo] . $ayuda. $simbolosCierre[$eleccionSimbolo];
+    array_push($arrayAyudas, $ayuda);
+}
+
+// echo $arrayAyudas[0];
+// echo $arrayAyudas[1];
+// echo $arrayAyudas[2];
+
+
 //Creamos string con palabras y simbolos
 $stringPrincipal="";
 $contador=0;
