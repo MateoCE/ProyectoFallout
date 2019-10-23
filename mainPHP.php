@@ -23,6 +23,7 @@ while ($contador<6) {
 }
 
 $simbolos=[",","`","!","?","\\","|","/",":","+","[","]", "=", "{", "}","@","#","$","%","^","*","(",")"];
+
 //6 posiciones aleatorias sin solapar
 $contador=0;
 $listaPosiciones=[];
@@ -74,6 +75,12 @@ for ($pos=0; $pos <strlen($stringPrincipal); $pos++){
   }
 }
 
+//Anadimos spans a las ayudas
+$arrayAyudas = ["[/&]","{!=@@}","(=%&)"];
+foreach ($arrayAyudas as $ayuda) {
+  $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas'>$ayuda</span>", $stringPrincipal);
+}
+
 //Anadimos spans a las palabras
 $palabrasCortadas=[];
 foreach($palabrasRandom as $palabra){
@@ -86,6 +93,9 @@ foreach($palabrasRandom as $palabra){
     $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras'>$palabra</span>", $stringPrincipal);
   }
 }
+
+
+
 echo "<div id='mainPalabras'><div id='bloquepalabras1'>".$stringPrincipal."</div></div>";
 
 ?>
