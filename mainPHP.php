@@ -46,7 +46,7 @@ foreach ($filasOcupadas as $pos) {
 
 $arrayAyudas = [];
 while (count($arrayAyudas) < 3) {
-    $randomLength = rand(1, 10);
+    $randomLength = rand(1, 8);
     $eleccionSimbolo = rand(0, count($simbolosOpertura) - 1);
     $ayuda = "";
     while (strlen($ayuda) < $randomLength) {
@@ -56,9 +56,8 @@ while (count($arrayAyudas) < 3) {
     array_push($arrayAyudas, $ayuda);
 }
 
-echo $arrayAyudas[0];
-echo $arrayAyudas[1];
-echo $arrayAyudas[2];
+
+
 
 $listaPosicionesAyudas=[];
 $index = 0;
@@ -66,7 +65,9 @@ while (count($listaPosicionesAyudas) < 3) {
     $filaRandom = rand(0, ( 384/ 12) - 1);
     if (!in_array($filaRandom, $filasOcupadas) && !in_array(($filaRandom - 1), $filasOcupadas)) {
           $lengthAyuda = strlen($arrayAyudas[$index]);
-          $fila = rand(0, (12 - $lengthAyuda));
+          $fila = rand(0, (12-$lengthAyuda));
+          echo $fila;
+          echo $lengthAyuda;
           $finalPos = $filaRandom * 12 + $fila;
           array_push($filasOcupadas, $filaRandom);
           array_push($listaPosicionesAyudas, $finalPos);
@@ -74,7 +75,10 @@ while (count($listaPosicionesAyudas) < 3) {
     }      
 }
 
+print_r($filasOcupadas);
+print_r($listaPosiciones);
 print_r($listaPosicionesAyudas);
+
 
 //Creamos string con palabras, simbolos y ayudas
 $stringPrincipal="";
@@ -82,13 +86,12 @@ $contador=0;
 $contadorAyudas = 0;
 while (strlen($stringPrincipal) < 384) {
     $posicionString = strlen($stringPrincipal);
-    if (!in_array($posicionString,$listaPosiciones)){
+    if (!in_array($posicionString,$listaPosiciones) and !in_array($posicionString, $listaPosicionesAyudas)){
       $stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
     }else if (in_array($posicionString, $listaPosicionesAyudas)) {
       $stringPrincipal .= $arrayAyudas[$contadorAyudas];
       $contadorAyudas++;
-      echo 
-      echo "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP";
+      echo "PPPPPPPPPPPPPPPPPPPPPPPPPPPPP".$contadorAyudas;
     }
     else{
       $palabraAnadida = $palabrasRandom[$contador];
