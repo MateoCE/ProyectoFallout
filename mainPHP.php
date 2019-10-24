@@ -131,7 +131,7 @@ $cont=0;
 
 foreach ($arrayAyudas as $ayuda) {
   if ($cont!=3) {
-    $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas' style='color:red'>$ayuda</span>", $stringPrincipal);
+    $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas' >$ayuda</span>", $stringPrincipal);
     $cont++;
   }
 }
@@ -142,10 +142,10 @@ foreach($palabrasRandom as $palabra){
   if(!strpos($stringPrincipal,$palabra)){
     for ($i = 1; $i < strlen($palabra); $i++){
       $stringDiv = substr($palabra,0,$i)."<br>".substr($palabra,$i);
-      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' style='color:blue'>$stringDiv</span>", $stringPrincipal);
+      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' >$stringDiv</span>", $stringPrincipal);
     }
   }else{
-    $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' style='color:blue'>$palabra</span>", $stringPrincipal);
+    $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' >$palabra</span>", $stringPrincipal);
   }
 }
 
