@@ -1,6 +1,6 @@
 body {
-	background-color: black;
-	color: green;
+  background-color: black;
+  color: green;
 }
 #extremo{
   display: flex;
@@ -27,15 +27,15 @@ body {
   background-color: green;
 }
 #bloqueP{
-	display: flex;
-	align-items: center;
-  	justify-content: center;
-  	
-  	margin-top: 7%;
-  	
-  	color:green;
-	font-weight: 600;
-	font-size: 400%;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    
+    margin-top: 7%;
+    
+    color:green;
+  font-weight: 600;
+  font-size: 400%;
     text-shadow: 0 1px 0 black,
                 0 2px 0 black,
                 0 3px 0 black, 
@@ -50,12 +50,12 @@ body {
                 0 20px 20px black; 
 }
 #botones{
-	display: flex;
-	align-items: center;
-  	justify-content: center;
-  	margin-top: 5%;
-  	
-  	color:green;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    
+    color:green;
 }
 .boton{
     padding: 30px;
@@ -70,15 +70,15 @@ body {
     
     border: 10px solid green;
 
-	margin-right: 5%;
-	margin-left: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 .boton:hover{
-	color:black;
-	background-color: green;
+  color:black;
+  background-color: green;
 }
 .letra{
-	font-family: 'Oxygen Mono', monospace;
+  font-family: 'Oxygen Mono', monospace;
 }
 
 .screen {
