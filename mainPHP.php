@@ -65,13 +65,20 @@ while (count($listaPosicionesAyudas) < 3) {
     $filaRandom = rand(0, ( 384/ 12) - 1);
     if (!in_array($filaRandom, $filasOcupadas) && !in_array(($filaRandom - 1), $filasOcupadas)) {
           $lengthAyuda = strlen($arrayAyudas[$index]);
-          $fila = rand(0, (12-$lengthAyuda));
-          echo $fila;
-          echo $lengthAyuda;
-          $finalPos = $filaRandom * 12 + $fila;
-          array_push($filasOcupadas, $filaRandom);
-          array_push($listaPosicionesAyudas, $finalPos);
-          $index++;
+		if($filaRandom >16){
+			$PosicionEnFila = rand(0, 4);
+			$finalPos = $filaRandom * 12 + $PosicionEnFila;
+			array_push($filasOcupadas, $filaRandom);
+			array_push($listaPosicionesAyudas, $finalPos);
+		}else{  
+			$PosicionEnFila = rand(0, (12-$lengthAyuda));
+			echo $PosicionEnFila;
+			echo $lengthAyuda;
+			$finalPos = $filaRandom * 12 + $PosicionEnFila;
+			array_push($filasOcupadas, $filaRandom);
+			array_push($listaPosicionesAyudas, $finalPos);
+		}
+         $index++;
     }      
 }
 
