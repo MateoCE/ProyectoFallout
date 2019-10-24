@@ -1,5 +1,3 @@
-
-
 #contrasena{
 		visibility: hidden;
 		display: none;
@@ -12,22 +10,50 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+.prompt{
+	width: 170px;
+	height: 54px;
+}
+.blink {
+        animation: blinker 0.5s linear infinite;
+}
+@keyframes blinker {  
+	100%{
+		opacity: 100% 
+	}
+    0%{ 
+    opacity: 0; 
+}
+}
+#cascada{
+	position: absolute;
+	width: 86%;
+	height: 80%;
+	left: 5.5%;
+	top: 7%;
+}
 
 #bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3{
-	font-family: Courier New, sans-serif;
+	font-family: COurier New, sans-serif;
 	font-size: 11.5pt;
+	font-weight: 700;
 }
 .palabras:hover {
     background: green;
     color:black;
 }
+.ayudas:hover {
+    background: green;
+    color:black;
+}
 #titulo{
 	position:absolute;
-	left: 6%;
+	left: -6%;
 	top: 5%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
+	font-weight: 700;
 }
 #intentos{
 	position:absolute;
@@ -36,6 +62,8 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
+
+	font-weight: 700;
 }
 #bloquepalabras1{
 	position:absolute;
@@ -63,7 +91,7 @@ body {
 #bloqueFijo3{
 	position: absolute;
 	left: 70%;
-	bottom: 13%;
+	bottom: 13.5%;
 
 }
 #victoria{
@@ -73,70 +101,253 @@ body {
 }
 #derrota{
 	position: absolute;
-	left: 32%;
-	bottom: 48%;
+	left: 4%;
+	bottom: 10%;
 	font-size: 20pt;
+}
+#tiempo{
+	position: absolute;
+	left: 80%;
+	bottom: 71%;
+	font-size:20pt;
+	border-style: solid;
+  	border-width: 1px;
+  	color:green;
+
+	font-weight: 700;
 }
 #documento{
 	position: relative;
 	width: 665px;
 	height: 537px;
-	top: 40px;
 	margin: 0 auto;
 }
-@media only screen and (max-device-height:768px){
-		#documento{
-		position: relative;
-		width: 665px;
-		height: 537px;
-		top: 130px;
-		margin: 0 auto;
+
+@media only screen and (max-width: 600px) {
+	body{
+		background-image: url(../terminales/error404.jpg);
+		background-size: cover;
+		color: black;
+
+	}
+	.ocultar{
+		visibility: hidden;
+	}
+	#bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3,#tiempo,#titulo,#intentos{
+		font: 0/0 a;
+  		text-shadow: transparent;
+  		color: transparent;
+  		text-decoration: none;
+	}
+}
+@media (max-height: 1280px) and (min-width: 600px){
+	#documento{
+		top: 360px;
+	}
+}
+@media (max-height: 1240px) and (min-width: 600px){
+	#documento{
+		top: 340px;
+	}
+}
+@media (max-height: 1200px) and (min-width: 600px){
+	#documento{
+		top: 320px;
+	}
+}
+@media(max-height: 1160px) and (min-width: 600px){
+	#documento{
+		top: 300px;
+	}
+}
+@media (max-height: 1120px) and (min-width: 600px){
+	#documento{
+		top: 280px;
+	}
+}
+@media(max-height: 1080px) and (min-width: 600px){
+	#documento{
+		top: 270px;
+	}
+}
+@media (max-height: 1040px) and (min-width: 600px){
+	#documento{
+		top: 250px;
+	}
+}
+@media (max-height: 1000px) and (min-width: 600px){
+	#documento{
+		top: 230px;
+	}
+}
+@media (max-height: 960px) and (min-width: 600px){
+	#documento{
+		top: 210px;
+	}
+}
+@media (max-height: 920px) and (min-width: 600px){
+	#documento{
+		top: 190px;
+	}
+}
+@media (max-height: 880px) and (min-width: 600px){
+	#documento{
+		top: 170px;
+	}
+}
+@media (max-height: 849px) and (min-width: 600px){
+	#documento{
+		top: 150px;
 	}
 }
 
-
-@media only screen and (max-device-height:1080px){
+@media (max-height: 800px) and (min-width: 600px){
 	#documento{
-		top: 265px;
-		
-
+		top: 140px;
 	}
-
-@media only screen and (max-device-height:1024px){
+}
+@media (max-height: 760px) and (min-width: 600px){
 	#documento{
-		top: 70px;
-		
-
+		top: 120px;
 	}
-
-@media only screen and (max-device-height:680px){
+}
+@media (max-height: 720px) and (min-width: 600px){
 	#documento{
-		top: 55px;
-		
-
+		top: 100px;
 	}
-
-@media only screen and (max-device-height:650px){
+}
+@media (max-height: 680px) and (min-width: 600px){
 	#documento{
-		top: 35px;
-		
-
+		top: 80px;
 	}
+}
+@media (max-height: 640px) and (min-width: 600px){
+	#documento{
+		top: 60px;
+	}
+}
 
-@media only screen and (max-device-height:600px){
+@media (max-height: 600px) and (min-width: 600px){
+	#documento{
+		top: 40px;
+	}
+}
+@media (max-height: 560px) and (min-width: 600px){
 	#documento{
 		top: 20px;
-		
-
 	}
-	
 }
-
-@media only screen and (max-device-height:510px){
+@media (max-height: 520px) and (min-width: 600px){
 	#documento{
 		top: 0px;
-		
-
 	}
-	
+}
+@media  (max-height: 480px) and (min-width: 600px){
+	#documento{
+		top: -20px;
+	}
+}
+@media (max-height: 460px) and (min-width: 600px){
+	#documento{
+		top: -40px;
+	}
+}
+@media (max-height: 440px) and (min-width: 600px){
+	#documento{
+		top: -70px;
+	}
+}
+@media (max-height: 430px) and (min-width: 600px){
+	#documento{
+		top: -90px;
+	}
+}
+@media (max-height: 359px){
+	body{
+		background-image: url(../terminales/error404.jpg);
+		background-size: cover;
+		color: black;
+	}
+	.ocultar{
+		visibility: hidden;
+	}
+	#bloquepalabras1,#bloquepalabras2,#bloqueFijo1,#bloqueFijo2,#bloqueFijo3,#tiempo,#titulo,#intentos{
+		font: 0/0 a;
+  		text-shadow: transparent;
+  		color: transparent;
+  		text-decoration: none;
+	}
+}
+
+.screen {
+  animation:colorPulse 6s infinite ease-in-out;
+  box-sizing:border-box;
+  font-size:20px;
+  height:100vh;
+  overflow:hidden;
+  padding:10vmin;
+  width:100vw;
+}
+
+.screen:before {
+  animation:wave 6s infinite ease-in-out;
+  content:"";
+  height:20vh;
+  left:0;
+  opacity:1;
+  position:absolute;
+  right:0;
+  z-index:1;
+}
+
+.screen:after {
+  background-size:4px 4px;
+  bottom:0;
+  content:"";
+  left:0;
+  pointer-events:none;
+  position:absolute;
+  right:0;
+  top:0;
+  z-index:2;
+}
+
+p:last-child:after {
+  animation:blink 1s infinite;
+  content:"_";
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color:#0c0;
+  }
+  48%, 52% {
+    color:#090;
+  }
+  50% {
+    color:#060;
+  }
+}
+
+@keyframes wave {
+  0% {
+    box-shadow:0 -10vh 20vh black;
+    top:-100vh;
+  }
+  48%, 52% {
+    box-shadow:0 -10vh 20vh black;
+  }
+  50% {
+    box-shadow:0 -10vh 20vh black;
+  }
+  100% {
+    box-shadow:0 -10vh 20vh black;
+    top:200vh;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity:0;
+  }
 }
