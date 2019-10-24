@@ -22,7 +22,7 @@ while ($contador<6) {
   }
 }
 
-$simbolos=[",","`","!","?","\\","|","/",":","+", "=", "@","#","$","%","^","*"];
+$simbolos=["¿","`","!","?","\\","|","/",":","+", "=", "@","#","$","%","^","*"];
 $simbolosOpertura = ["(", "[", "{"];
 $simbolosCierre = [")", "]", "}"];
 
@@ -46,7 +46,7 @@ foreach ($filasOcupadas as $pos) {
 
 $arrayAyudas = [];
 while (count($arrayAyudas) < 3) {
-    $randomLength = rand(1, 8);
+    $randomLength = rand(1, 6);
     $eleccionSimbolo = rand(0, count($simbolosOpertura) - 1);
     $ayuda = "";
     while (strlen($ayuda) < $randomLength) {
