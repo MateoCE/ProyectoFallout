@@ -22,7 +22,7 @@ while ($contador<6) {
   }
 }
 
-$simbolos=["¿","`","!","?","\\","|","/",":","+", "=", "@","#","$","%","^","*"];
+$simbolos=[",", "`", "!", "@", "#", "$", "%", "^", "&", "*", "?", "\\", "|", "/", ":", ";", "+", "="];
 $simbolosOpertura = ["(", "[", "{"];
 $simbolosCierre = [")", "]", "}"];
 
@@ -72,8 +72,6 @@ while (count($listaPosicionesAyudas) < 3) {
 			array_push($listaPosicionesAyudas, $finalPos);
 		}else{  
 			$PosicionEnFila = rand(0, (12-$lengthAyuda));
-			echo $PosicionEnFila;
-			echo $lengthAyuda;
 			$finalPos = $filaRandom * 12 + $PosicionEnFila;
 			array_push($filasOcupadas, $filaRandom);
 			array_push($listaPosicionesAyudas, $finalPos);
@@ -81,11 +79,6 @@ while (count($listaPosicionesAyudas) < 3) {
          $index++;
     }      
 }
-
-print_r($filasOcupadas);
-print_r($listaPosiciones);
-print_r($listaPosicionesAyudas);
-
 
 //Creamos string con palabras, simbolos y ayudas
 $stringPrincipal="";
@@ -98,7 +91,6 @@ while (strlen($stringPrincipal) < 384) {
     }else if (in_array($posicionString, $listaPosicionesAyudas)) {
       $stringPrincipal .= $arrayAyudas[$contadorAyudas];
       $contadorAyudas++;
-      echo "PPPPPPPPPPPPPPPPPPPPPPPPPPPPP".$contadorAyudas;
     }
     else{
       $palabraAnadida = $palabrasRandom[$contador];
