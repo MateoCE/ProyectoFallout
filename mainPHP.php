@@ -40,7 +40,7 @@ $listaPosiciones=[];
 }
 
 $filasOcupadas=[];
-foreach ($filasOcupadas as $pos) {
+foreach ($listaPosiciones as $pos) {
     array_push($filasOcupadas, floor($pos / 12));
 }
 

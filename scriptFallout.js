@@ -185,6 +185,6 @@ function restablecerIntentos() {
 		document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
 		document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
 		document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
-		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded."+"<br/>"+">restored lives.<br/>";
+		document.getElementById('prompt1').innerHTML=">Help Level 2<br/>"+">Activaded."+"<br/>"+">restored lives.<br/>";
         
     }
