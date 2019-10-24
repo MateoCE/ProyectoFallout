@@ -66,7 +66,7 @@ while (count($listaPosicionesAyudas) < 3) {
     if (!in_array($filaRandom, $filasOcupadas) && !in_array(($filaRandom - 1), $filasOcupadas)) {
           $lengthAyuda = strlen($arrayAyudas[$index]);
 		if($filaRandom >16){
-			$PosicionEnFila = rand(0, 4);
+			$PosicionEnFila = rand(0, 2);
 			$finalPos = $filaRandom * 12 + $PosicionEnFila;
 			array_push($filasOcupadas, $filaRandom);
 			array_push($listaPosicionesAyudas, $finalPos);
