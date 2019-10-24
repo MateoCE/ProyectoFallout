@@ -45,11 +45,11 @@ function borrarPalabra(){
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabrasAyuda[i].innerHTML!=contrasenaScript){
 			arrayPalabras.push(palabrasAyuda[i].innerHTML);
-			// document.getElementById('prompt5').innerHTML=document.getElementById('prompt4').innerHTML;
-			// document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
-			// document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
-			// document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
-			// document.getElementById('prompt1').innerHTML=">Help Level 2<br/>"+">Activaded."+"<br/>"+">"palabrasAyuda[i].innerHTML" Eliminated<br/>";
+			document.getElementById('prompt5').innerHTML=document.getElementById('prompt4').innerHTML;
+			document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
+			document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
+			document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
+			document.getElementById('prompt1').innerHTML=">Help Level 2<br/>"+">Activaded."+"<br/>"+">"palabrasAyuda[i].innerHTML" Eliminated<br/>";
 		}
 	}
 
