@@ -22,7 +22,7 @@ while ($contador<6) {
   }
 }
 
-$simbolos=[",", "`", "!", "@", "#", "$", "%", "^", "&", "*", "?", "\\", "|", "/", ":", ";", "+", "="];
+$simbolos=[",", "`", "!", "@", "#", "$", "%", "^", "*", "?", "\\", "|", "/", ":", ";", "+", "="];
 $simbolosOpertura = ["(", "[", "{"];
 $simbolosCierre = [")", "]", "}"];
 
@@ -63,21 +63,22 @@ $listaPosicionesAyudas=[];
 $index = 0;
 while (count($listaPosicionesAyudas) < 3) {
     $filaRandom = rand(0, ( 384/ 12) - 1);
-    if (!in_array($filaRandom, $filasOcupadas) && !in_array(($filaRandom - 1), $filasOcupadas)) {
-          $lengthAyuda = strlen($arrayAyudas[$index]);
-		if($filaRandom >16){
-			$PosicionEnFila = rand(0,(12-$lengthAyuda));
-			$finalPos = ($filaRandom * 12 + $PosicionEnFila)-8;
-			array_push($filasOcupadas, $filaRandom);
-			array_push($listaPosicionesAyudas, $finalPos);
-		}else{  
-			$PosicionEnFila = rand(0, (12-$lengthAyuda));
-			$finalPos = $filaRandom * 12 + $PosicionEnFila;
-			array_push($filasOcupadas, $filaRandom);
-			array_push($listaPosicionesAyudas, $finalPos);
-		}
-         $index++;
-    }      
+    if ($filaRandom!=16) {
+      if (!in_array($filaRandom, $filasOcupadas) && !in_array(($filaRandom - 1), $filasOcupadas)) {
+        $lengthAyuda = strlen($arrayAyudas[$index]);
+      if($filaRandom >16){
+        $finalPos = ($filaRandom * 12)-8 + 2;
+        array_push($filasOcupadas, $filaRandom);
+        array_push($listaPosicionesAyudas, $finalPos);
+      }else{  
+        $finalPos = $filaRandom * 12 + 2;
+        array_push($filasOcupadas, $filaRandom);
+        array_push($listaPosicionesAyudas, $finalPos);
+      }
+           $index++;
+      }  
+    }
+       
 }
 
 //Creamos string con palabras, simbolos y ayudas
@@ -86,16 +87,16 @@ $contador=0;
 $contadorAyudas = 0;
 while (strlen($stringPrincipal) < 384) {
     $posicionString = strlen($stringPrincipal);
-    if (!in_array($posicionString,$listaPosiciones) and !in_array($posicionString, $listaPosicionesAyudas)){
-      $stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
+    if (in_array($posicionString,$listaPosiciones)){
+      $palabraAnadida = $palabrasRandom[$contador];
+      $stringPrincipal .= $palabraAnadida;
+      $contador++;
     }else if (in_array($posicionString, $listaPosicionesAyudas)) {
       $stringPrincipal .= $arrayAyudas[$contadorAyudas];
       $contadorAyudas++;
     }
     else{
-      $palabraAnadida = $palabrasRandom[$contador];
-      $stringPrincipal .= $palabraAnadida;
-      $contador++;
+      $stringPrincipal .= $simbolos[rand(0,count($simbolos)-1)];
     }
 }
 
@@ -126,9 +127,13 @@ for ($pos=0; $pos <strlen($stringPrincipal); $pos++){
 
 
 //Anadimos spans a las ayudas
+$cont=0;
 
 foreach ($arrayAyudas as $ayuda) {
-  $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas'>$ayuda</span>", $stringPrincipal);
+  if ($cont!=3) {
+    $stringPrincipal=str_replace($ayuda, "<span id='$ayuda' onclick='ayudas(this.id)' class='ayudas' style='color:red'>$ayuda</span>", $stringPrincipal);
+    $cont++;
+  }
 }
 
 //Anadimos spans a las palabras
@@ -137,10 +142,10 @@ foreach($palabrasRandom as $palabra){
   if(!strpos($stringPrincipal,$palabra)){
     for ($i = 1; $i < strlen($palabra); $i++){
       $stringDiv = substr($palabra,0,$i)."<br>".substr($palabra,$i);
-      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras'>$stringDiv</span>", $stringPrincipal);
+      $stringPrincipal = str_replace($stringDiv, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' style='color:blue'>$stringDiv</span>", $stringPrincipal);
     }
   }else{
-    $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras'>$palabra</span>", $stringPrincipal);
+    $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' style='color:blue'>$palabra</span>", $stringPrincipal);
   }
 }
 

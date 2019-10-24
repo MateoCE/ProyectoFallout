@@ -64,6 +64,11 @@ function borrarPalabra(){
 			strPuntos+=".";
 		}
 	}
+	document.getElementById('prompt5').innerHTML=document.getElementById('prompt4').innerHTML;
+	document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
+	document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
+	document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
+	document.getElementById('prompt1').innerHTML=">Help Level 2<br/>"+">Activaded"+"<br/>"+">"+palabraEliminar+" removed<br/>";
 
 				//Cambiamos la palabra clickada por puntos
 	document.getElementById(palabraEliminar).innerHTML=strPuntos;
@@ -71,6 +76,8 @@ function borrarPalabra(){
 	document.getElementById(palabraEliminar).className="puntos";
 				//Cambiamos id de la plabra
 	document.getElementById(palabraEliminar).id=strPuntos;
+
+	
 
 }
 
@@ -128,22 +135,23 @@ function comprovarContrasena(palabra){
 
 function ayudas(ayuda){
 	if (ayuda[0]!=".") {
-	if(Math.random()<0.5){
-		restablecerIntentos();
-	}else{
-		borrarPalabra();
-	}
+		if(Math.random()<0.5){
+			restablecerIntentos();
+		}else{
+			console.log("eeeeeeeeeeee");
+			borrarPalabra();
+		}
 
-	var strAyuda = document.getElementById(ayuda).innerHTML;
-	var strPuntos = "";
-	for (var i = 0; i < strAyuda.length; i++) {
-		strPuntos+=".";
-	}
+		var strAyuda = document.getElementById(ayuda).innerHTML;
+		var strPuntos = "";
+		for (var i = 0; i < strAyuda.length; i++) {
+			strPuntos+=".";
+		}
 
-	document.getElementById(ayuda).innerHTML=strPuntos;
-	document.getElementById(ayuda).className="puntos";
-	document.getElementById(ayuda).id=strPuntos;
-}	
+		document.getElementById(ayuda).innerHTML=strPuntos;
+		document.getElementById(ayuda).className="puntos";
+		document.getElementById(ayuda).id=strPuntos;
+	}	
 }
 
 var anadirFinal = document.getElementById('bloquepalabras2').innerHTML.slice(0, 4);
@@ -185,6 +193,6 @@ function restablecerIntentos() {
 		document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;
 		document.getElementById('prompt3').innerHTML=document.getElementById('prompt2').innerHTML;
 		document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
-		document.getElementById('prompt1').innerHTML=">Help Level 2<br/>"+">Activaded."+"<br/>"+">restored lives.<br/>";
+		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded"+"<br/>"+">Restored lives<br/>";
         
     }
