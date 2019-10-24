@@ -24,7 +24,7 @@
 			Terminal Fallout
 		</div>
 		<div id="botones">
-			<button onclick="location.href='mainHTML.php'" class="letra boton">Jugar</button>
+			<button onclick="location.href='dificultadHTML.php'" class="letra boton">Jugar</button>
 			<button onclick="location.href='ranking.php'" class="letra boton">Ranking</button>
 		</div>
 	</div>
