@@ -28,9 +28,9 @@
 		</div>
 		<form action="mainHTML.php" method="_GET">
 		<div id="botones">
-				<input type="submit" name="dificultad" value="easy" class="letra boton"></input>
-				<input type="submit" name="dificultad" value="normal" class="letra boton"></input>
-				<input type="submit" name="dificultad" value="hard" class="letra boton"></input>		
+				<input type="submit" name="dificultad" value="Easy" class="letra boton"></input>
+				<input type="submit" name="dificultad" value="Normal" class="letra boton"></input>
+				<input type="submit" name="dificultad" value="Hard" class="letra boton"></input>		
 		</div>
 		<div id="extremo">
 			<label><input type="checkbox" name="extremo" >Activar modo extremo</label>

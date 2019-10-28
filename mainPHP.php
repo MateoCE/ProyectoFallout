@@ -8,29 +8,28 @@ if (isset($_GET["dificultad"])) {
 
   $dificultad = $_GET["dificultad"];
 
-  if($dificultad == "easy"){
+  if($dificultad == "Easy"){
 
     $numPalabras=6;
     $numAyudas=3;
     $file =fopen("resources/diccionarios/listaPalabrasFacil", "r");
 
-  }elseif ($dificultad == "normal") {
+  }elseif ($dificultad == "Normal") {
     
     $numPalabras=10;
     $numAyudas=3;
     $file =fopen("resources/diccionarios/listaPalabrasMedio", "r");
-  }elseif ($dificultad == "hard") {
+  }elseif ($dificultad == "Hard") {
 
     $numPalabras=12;
     $numAyudas=1;
     $file =fopen("resources/diccionarios/listaPalabrasDificil", "r");
 
   }
-
 }else{
   $numPalabras=6;
   $numAyudas=3;
-  $file = fopen("resources/diccionarios/listaPalabrasDificil", "r");
+  $file = fopen("resources/diccionarios/listaPalabrasFacil", "r");
 }
 
 
