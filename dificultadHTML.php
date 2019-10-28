@@ -26,14 +26,16 @@
 		<div id="bloqueP" class="letra">
 			Dificultad
 		</div>
+		<form action="mainHTML.php" method="_GET">
 		<div id="botones">
-			<button onclick="location.href='mainHTML.php'" class="letra boton">Fácil</button>
-			<button onclick="location.href='mainHTML.php'" class="letra boton">Medio</button>
-			<button onclick="location.href='mainHTML.php'" class="letra boton">Dificil</button>
+				<input type="submit" name="dificultad" value="easy" class="letra boton"></input>
+				<input type="submit" name="dificultad" value="normal" class="letra boton"></input>
+				<input type="submit" name="dificultad" value="hard" class="letra boton"></input>		
 		</div>
 		<div id="extremo">
-			<label><input type="checkbox" id="cbox1" value="first_checkbox"> Activar modo extremo</label>
+			<label><input type="checkbox" name="extremo" >Activar modo extremo</label>
 		</div>
+		</form>
 	</div>
 </body>
 </html>

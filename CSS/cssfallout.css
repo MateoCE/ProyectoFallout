@@ -5,7 +5,7 @@
 body {
 	background-color: #292003;
 	color: green;
-	background-image: url("../terminales/TerminalFallout.png");
+	background-image: url("../resources/imagenes/TerminalFallout.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -176,7 +176,7 @@ body {
 
 @media only screen and (max-width: 600px) {
 	body{
-		background-image: url(../terminales/error404.jpg);
+		background-image: url(../resources/imagenes/error404.jpg);
 		background-size: cover;
 		color: black;
 
@@ -315,7 +315,7 @@ body {
 }
 @media (max-height: 359px){
 	body{
-		background-image: url(../terminales/error404.jpg);
+		background-image: url(../resources/imagenes/error404.jpg);
 		background-size: cover;
 		color: black;
 	}
