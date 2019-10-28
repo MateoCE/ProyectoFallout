@@ -65,7 +65,7 @@
 		<div id="bloqueNegro" class="typing4"></div>
 	</div>
 	<div id="victoria" style="display: none"><img class= "ocultar" src="resources/imagenes/gifVictoria.gif"><button class= "ocultar" onclick="enviarDatos()">Continue</button></div>
-	<div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/perder.png" style="width: 600px"><button class= "ocultar" onclick="irMenuPrincipal()">Continue</button></div>
+	<div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/derrota.gif" style="width: 600px"><button class= "ocultar" onclick="irMenuPrincipal()">Continue</button></div>
 </div>
 <div id="formularioculto">
 	<form action="mainPHP.php" method="POST">
