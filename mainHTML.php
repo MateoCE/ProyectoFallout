@@ -11,12 +11,12 @@
 		require 'mainPHP.php';
 	?>
 	<div id="contenedorPrincipal">
-		<pre id="titulo">
-		Welcome to ROBCO Industries (TM) Termlink
+		<pre id="titulo" class="typing">
+		Welcome to ROBCO Industries (TM) Termlink</pre>
+		<pre id="titulo2" class="typing2">Password Required</pre>
 
-		Password Required </pre>
+		<pre id="intentos" class="typing3">Attempts Remaining: &block; &block; &block; &block; </pre>
 
-		<p id="intentos"> Attempts Remaining: &block; &block; &block; &block; </p>
 		<div id="bloqueFijo1">
 			0x0012<br/>
 			0x0024<br/>
@@ -62,10 +62,11 @@
 			<div>> <span class="blink">&block;</span></div>
 		</div>
 		<div id="tiempo">00:00</div>
+		<div id="bloqueNegro" class="typing4"></div>
 	</div>
 	<div id="victoria" style="display: none"><img class= "ocultar" src="terminales/gifVictoria.gif"><button class= "ocultar" onclick="enviarDatos()">Continue</button></div>
 	<div id="derrota" style="display: none"><img class= "ocultar" src="terminales/perder.png" style="width: 600px"><button class= "ocultar" onclick="irMenuPrincipal()">Continue</button></div>
-	</div>
+</div>
 <div id="formularioculto">
 	<form action="mainPHP.php" method="POST">
 	<input type="hidden" name="variablesRanking" id="variablesRanking" value="">

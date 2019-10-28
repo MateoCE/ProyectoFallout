@@ -87,6 +87,9 @@ function comprovarContrasena(palabra){
 		//Comprobamos si es la contraseña
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabra==contrasenaScript){
+			//Paramos interval(marcador) 
+			window.clearInterval(interval);
+
 			document.getElementById('contenedorPrincipal').innerHTML="";
 			document.getElementById('mainPalabras').innerHTML="";
 			document.getElementById('victoria').style.display="block";
@@ -159,33 +162,37 @@ document.getElementById('bloquepalabras2').innerHTML=document.getElementById('bl
 document.getElementById('bloquepalabras2').innerHTML+=anadirFinal;
 
 
-var segundos = 0;
-var minutos = 0;
-var puntuacionSegundos = 0;
-var marcador = document.getElementById("tiempo");
-window.setInterval(function(){
-	puntuacionSegundos++;
- 	segundos++;
- 	if (segundos<10) {
- 		if (minutos<10) {
- 			marcador.innerHTML = "0"+minutos+":0"+segundos;
- 		}else{
-			marcador.innerHTML = minutos+":0"+segundos;
- 		}
- 	}else{
- 		if (minutos<10) {
- 			marcador.innerHTML = "0"+minutos+":"+segundos;
- 		}else{
-			marcador.innerHTML = minutos+":"+segundos;
- 		}
- 	}
- 	if (segundos==59) {
- 		minutos++;
- 		segundos=-1;
- 	}
-},1000);
-
-
+//Marcador empieza a contar desde el segundo 6
+window.setTimeout(timeGame, 6000);
+var puntuacionSegundos= 0;
+var interval;
+function timeGame () {
+	var segundos = 0;
+	var minutos = 0;
+	var marcador = document.getElementById("tiempo");
+	//Variable interval que al acertar la contraseña paramos
+	interval = window.setInterval(function(){
+		puntuacionSegundos++;
+	 	segundos++;
+	 	if (segundos<10) {
+	 		if (minutos<10) {
+	 			marcador.innerHTML = "0"+minutos+":0"+segundos;
+	 		}else{
+				marcador.innerHTML = minutos+":0"+segundos;
+	 		}
+	 	}else{
+	 		if (minutos<10) {
+	 			marcador.innerHTML = "0"+minutos+":"+segundos;
+	 		}else{
+				marcador.innerHTML = minutos+":"+segundos;
+	 		}
+	 	}
+	 	if (segundos==59) {
+	 		minutos++;
+	 		segundos=-1;
+	 	}
+	},1000);
+}
 function restablecerIntentos() {
         contadorVidas = 4;
         vidasRestantes("+");
@@ -195,4 +202,4 @@ function restablecerIntentos() {
 		document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
 		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded"+"<br/>"+">Restored lives<br/>";
         
-    }
+}
