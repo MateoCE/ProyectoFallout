@@ -1,4 +1,19 @@
 var contadorVidas=4;
+var dalt=0;
+
+function daltonico() {
+    if (dalt==0) {
+    	document.getElementById('documento').style.color = "white";
+    	document.getElementById('tiempo').style.color = "white";
+    	document.getElementById('daltonico').innerHTML = "Colorblind: ON";
+    	dalt+=1;
+    }else{
+    	document.getElementById('documento').style.color = "green";
+    	document.getElementById('tiempo').style.color = "green";
+    	document.getElementById('daltonico').innerHTML = "Colorblind: OFF";
+    	dalt-=1;
+    }
+}
 
 function enviarDatos() {
 	var jsName = nombreJugador;

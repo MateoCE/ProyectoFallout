@@ -5,6 +5,7 @@
 <LINK REL=StyleSheet HREF="CSS/cssfallout.css" TYPE="text/css">
 </head>
 <body>
+<button onclick="daltonico()" id="daltonico">Colorblind: OFF</button>
 <div id="documento">
 	<div id="cascada" class="screen"></div>
 	<?php
