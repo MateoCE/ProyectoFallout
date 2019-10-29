@@ -91,9 +91,9 @@
 			    echo '<th>Time</th>';
 			echo '</tr>';
 
-			$contador = 1;
+			$contador = 0;
 			foreach ($arrayJugadores as $row) {
-				if($contador<=10){
+				if($contador<=9){
 					$contador++;
 					if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])){
 						if($row[0]==$phpName && $row[1]==$phpTime && $row[2]==$phpTries){
