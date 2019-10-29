@@ -5,92 +5,93 @@
 	<LINK REL=StyleSheet HREF="CSS/cssRanking.css" TYPE="text/css">
 </head>
 <body>
+	<?php
+		if (isset($_POST['Hard'])) {
+			$ranking = "resources/ranking/rankingHard.txt";
+			$titulo = "Hard";
+		} 
+		elseif (isset($_POST['Normal'])) {
+			$ranking = "resources/ranking/rankingNormal.txt";
+			$titulo = "Normal";
+		}
+		elseif (isset($_POST['Easy'])) {
+			$ranking = "resources/ranking/rankingEasy.txt";
+			$titulo = "Easy";
+		}else{
+			$titulo = $_POST["gameMode"];
+			$titulo  = ucfirst($titulo);
+		}
 
-	<div id="ranking" class="screen">
-		<div id="bloqueP" class="letra">
-				Ranking Fallout 
-		</div>
-		<div id="botones">
-		<form method="post">
-			<input type="submit" class="boton" name="Easy" value="Easy" />
-			<input type="submit" class="boton" name="Normal" value="Normal" />
-			<input type="submit" class="boton" name="Hard" value="Hard" />
-		</form>
-		</div>
-		<?php
-			if (isset($_POST['Hard'])) {
-				$ranking = "resources/ranking/rankingHard.txt";
-			} 
+		if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])) {		
+			$phpName = $_POST["name"];
+			$phpTime = $_POST["time"];
+			$phpTries = $_POST["tries"];
+			$phpGameMode = $_POST["gameMode"];
 
-			if (isset($_POST['Normal'])) {
-				$ranking = "resources/ranking/rankingNormal.txt";
-			}
-
-			if (isset($_POST['Easy'])) {
-				$ranking = "resources/ranking/rankingEasy.txt";
-			} 
-		?>
-		<table id="players">
-		  <tr>
-		  	<th id="position">Rank</th>
-		    <th>Name</th>
-		    <th>Lives</th>
-		    <th>Time</th>
-		  </tr>
-		  <?php
-		 
-
-			if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])) {
-
+			$variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
 			
-				$phpName = $_POST["name"];
-				$phpTime = $_POST["time"];
-				$phpTries = $_POST["tries"];
-				$phpGameMode = $_POST["gameMode"];
- 
-				$variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
-				
-				if($phpGameMode == "easy"){
-					
-					file_put_contents("resources/ranking/rankingEasy.txt", $variables, FILE_APPEND | LOCK_EX);
-					$ranking = "resources/ranking/rankingEasy.txt";
-					
-				}elseif($phpGameMode == "normal"){
-					
-					file_put_contents("resources/ranking/rankingNormal.txt", $variables, FILE_APPEND | LOCK_EX);
-					$ranking = "resources/ranking/rankingNormal.txt";
-					
-				}elseif($phpGameMode == "hard"){
-				
-					file_put_contents("resources/ranking/rankingHard.txt", $variables, FILE_APPEND | LOCK_EX);
-					$ranking = "resources/ranking/rankingHard.txt";
-					
-				}
+			if($phpGameMode == "easy"){		
+				file_put_contents("resources/ranking/rankingEasy.txt", $variables, FILE_APPEND | LOCK_EX);
+				$ranking = "resources/ranking/rankingEasy.txt";	
+			}elseif($phpGameMode == "normal"){		
+				file_put_contents("resources/ranking/rankingNormal.txt", $variables, FILE_APPEND | LOCK_EX);
+				$ranking = "resources/ranking/rankingNormal.txt";
+			}elseif($phpGameMode == "hard"){
+				file_put_contents("resources/ranking/rankingHard.txt", $variables, FILE_APPEND | LOCK_EX);
+				$ranking = "resources/ranking/rankingHard.txt";		
 			}
+		}
 
 
-			$arrayJugadores=[];
-			$file = fopen($ranking, "r") or exit("Unable to open file!");
-			while(!feof($file))
-			{
-				$jugador = trim(fgets($file));
-				$listaJugador = explode(';', $jugador);
-				if (count($listaJugador)>1) {
-					array_push($arrayJugadores, $listaJugador);
-				}	
+		$arrayJugadores=[];
+		$file = fopen($ranking, "r") or exit("Unable to open file!");
+		while(!feof($file)){
+			$jugador = trim(fgets($file));
+			$listaJugador = explode(';', $jugador);
+			if (count($listaJugador)>1) {
+				array_push($arrayJugadores, $listaJugador);
+			}	
+		}
+
+		uasort($arrayJugadores, 'sort_by_attempts');
+				
+		function sort_by_attempts ($a, $b) {
+			if ($a[2]==$b[2]) {
+				return $a[1] - $b[1];
+			}else{
+				return $b[2] - $a[2];
 			}
+		}
+		echo '<div id="ranking" class="screen">';
+		echo '<div id="bloqueP" class="letra">';
+			echo 'Ranking Fallout '.$titulo;
+		echo '</div>';
+		echo '<div id="botones">';
+		echo '<form method="post">';
+			if ($titulo=='Hard') {
+				echo '<input type="submit" class="boton" name="Easy" value="Easy" />';
+				echo '<input type="submit" class="boton" name="Normal" value="Normal" />';
+				echo '<input type="submit" class="boton" name="Hard" value="Hard" STYLE="background-color: #b2ff00;"/>';
+			}elseif ($titulo=='Normal') {
+				echo '<input type="submit" class="boton" name="Easy" value="Easy" />';
+				echo '<input type="submit" class="boton" name="Normal" value="Normal" STYLE="background-color: #b2ff00;"/>';
+				echo '<input type="submit" class="boton" name="Hard" value="Hard" />';
+			}elseif ($titulo=='Easy') {
+				echo '<input type="submit" class="boton" name="Easy" value="Easy" STYLE="background-color: #b2ff00;"/>';
+				echo '<input type="submit" class="boton" name="Normal" value="Normal" />';
+				echo '<input type="submit" class="boton" name="Hard" value="Hard" />';
+			}
+		echo '</form>';
+		echo '</div>';
+		echo '<table id="players">';
+			echo '<tr>';
+			  	echo '<th id="position">Rank</th>';
+			    echo '<th>Name</th>';
+			    echo '<th>Lives</th>';
+			    echo '<th>Time</th>';
+			echo '</tr>';
 
-			uasort($arrayJugadores, 'sort_by_attempts');
-
-				function sort_by_attempts ($a, $b) {
-					if ($a[2]==$b[2]) {
-						return $a[1] - $b[1];
-					}else{
-						return $b[2] - $a[2];
-					}
-				}
-
-			$contador = 0;
+			$contador = 1;
 			foreach ($arrayJugadores as $row) {
 				if($contador<=10){
 					$contador++;

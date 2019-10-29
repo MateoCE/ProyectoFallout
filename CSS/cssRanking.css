@@ -15,7 +15,7 @@ tr:hover{
   margin-bottom: 1%;
   color:green;
   font-weight: 800;
-  font-size: 600%;
+  font-size: 500%;
   text-shadow: 0 1px 0 black,
                 0 2px 0 black,
                 0 3px 0 black, 
@@ -36,7 +36,6 @@ tr:hover{
   margin-top: 1%;
 }
 .boton{
-  justify-content: space-around;
   padding: 10px;
   font-weight: 800;
   font-size: 200%;
@@ -49,6 +48,7 @@ tr:hover{
 .boton:hover{
   color:black;
   background-color: green;
+  border: 10px solid black;
 }
 
 
