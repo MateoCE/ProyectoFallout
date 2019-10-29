@@ -8,9 +8,28 @@
 
 	<div id="ranking" class="screen">
 		<div id="bloqueP" class="letra">
-				Ranking Fallout
+				Ranking Fallout 
 		</div>
-	
+		<div id="botones">
+		<form method="post">
+			<input type="submit" class="boton" name="Easy" value="Easy" />
+			<input type="submit" class="boton" name="Normal" value="Normal" />
+			<input type="submit" class="boton" name="Hard" value="Hard" />
+		</form>
+		</div>
+		<?php
+			if (isset($_POST['Hard'])) {
+				$ranking = "resources/ranking/rankingHard.txt";
+			} 
+
+			if (isset($_POST['Normal'])) {
+				$ranking = "resources/ranking/rankingNormal.txt";
+			}
+
+			if (isset($_POST['Easy'])) {
+				$ranking = "resources/ranking/rankingEasy.txt";
+			} 
+		?>
 		<table id="players">
 		  <tr>
 		  	<th id="position">Rank</th>
@@ -19,8 +38,7 @@
 		    <th>Time</th>
 		  </tr>
 		  <?php
-		  
-			$ranking = "resources/ranking/rankingEasy.txt";
+		 
 
 			if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])) {
 
@@ -76,13 +94,22 @@
 			foreach ($arrayJugadores as $row) {
 				if($contador<=10){
 					$contador++;
-					if($row[0]==$phpName && $row[1]==$phpTime && $row[2]==$phpTries){
-						echo "<tr>";
-							echo "<td>$contador</td>";
-							echo "<td><span style='color:red'>$row[0]</span></td>";
-							echo "<td><span style='color:red'>$row[2]</span></td>";
-							echo "<td><span style='color:red'>$row[1]s</span></td>";
-						echo "<tr/>";
+					if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])){
+						if($row[0]==$phpName && $row[1]==$phpTime && $row[2]==$phpTries){
+							echo "<tr>";
+								echo "<td><span style='color:red'>$contador</span></td>";
+								echo "<td><span style='color:red'>$row[0]</span></td>";
+								echo "<td><span style='color:red'>$row[2]</span></td>";
+								echo "<td><span style='color:red'>$row[1]s</span></td>";
+							echo "<tr/>";
+						}else{
+							echo "<tr>";
+								echo "<td>$contador</td>";
+								echo "<td>$row[0]</td>";
+								echo "<td>$row[2]</td>";
+								echo "<td>$row[1]s</td>";
+							echo "<tr/>";
+						}
 					}else{	
 						echo "<tr>";
 							echo "<td>$contador</td>";

@@ -33,10 +33,10 @@ tr:hover{
 #botones{
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 1%;
 }
 .boton{
+  justify-content: space-around;
   padding: 10px;
   font-weight: 800;
   font-size: 200%;
@@ -45,6 +45,7 @@ tr:hover{
   border-radius: 6px;
   border: 10px solid green;
 }
+
 .boton:hover{
   color:black;
   background-color: green;
