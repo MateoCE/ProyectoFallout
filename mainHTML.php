@@ -34,7 +34,9 @@
 			0xF190<br/>
 			0xX202
 		</div>
-		<?phprequire 'mainPHP.php';?>
+		<?php
+		require 'mainPHP.php';
+		?>
 		<div id="bloqueFijo2">
 			0x0214<br/>
 			0xF226<br/>
