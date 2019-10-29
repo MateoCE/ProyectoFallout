@@ -20,11 +20,11 @@
 		  
 			$ranking = "resources/ranking/rankingEasy.txt";
 
-			if (!empty($_GET["name"]) && !empty($_GET["time"]) && !empty($_GET["tries"]) && !empty($_GET["gameMode" ]) {
-				$phpName = $_GET["name"];
-				$phpTime = $_GET["time"];
-				$phpTries = $_GET["tries"];
-				$phpGameMode = $_GET["gameMode"];
+			if (!empty($_POST["name"]) || !empty($_POST["time"]) || !empty($_POST["tries"]) || !empty($_POST["gameMode" ]) {
+				$phpName = $_POST["name"];
+				$phpTime = $_POST["time"];
+				$phpTries = $_POST["tries"];
+				$phpGameMode = $_POST["gameMode"];
  
 				$variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
 				
