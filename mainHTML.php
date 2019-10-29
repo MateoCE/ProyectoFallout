@@ -5,7 +5,11 @@
 <LINK REL=StyleSheet HREF="CSS/cssfallout.css" TYPE="text/css">
 </head>
 <body>
-<button onclick="daltonico()" id="daltonico">Colorblind: OFF</button>
+<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
+<audio id="win" src="resources/sonidos/kirby-victory.mp3"></audio>
+<audio id="lose" src="resources/sonidos/error-fallo-1.mp3"></audio>
+<audio id="help" src="resources/sonidos/mario-bros vida.mp3"></audio>
+<button onclick="play(); setTimeout(function(){daltonico()},200);" id="daltonico">Colorblind: OFF</button>
 <div id="documento">
 	<div id="cascada" class="screen"></div>
 	<?php

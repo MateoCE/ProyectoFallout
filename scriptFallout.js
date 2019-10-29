@@ -102,6 +102,7 @@ function comprovarContrasena(palabra){
 		//Comprobamos si es la contraseña
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabra==contrasenaScript){
+			victoria();
 			//Paramos interval(marcador) 
 			window.clearInterval(interval);
 
@@ -113,6 +114,7 @@ function comprovarContrasena(palabra){
 		//Si no es la contraseña entramos
 		}else{
 			//Restamos vida
+			derrota();
 			vidasRestantes("-");
 				
 				//Contador coincidencias comparando con la contraseña
@@ -152,6 +154,7 @@ function comprovarContrasena(palabra){
 }
 
 function ayudas(ayuda){
+	sonidoAyuda();
 	if (ayuda[0]!=".") {
 		if(Math.random()<0.5){
 			restablecerIntentos();
@@ -217,4 +220,20 @@ function restablecerIntentos() {
 		document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
 		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded"+"<br/>"+">Restored lives<br/>";
         
+}
+function play(){
+   	var audio = document.getElementById("audio");
+    audio.play();
+}
+function victoria(){
+   	var victory = document.getElementById("win");
+    victory.play();
+}
+function derrota(){
+   	var  perder= document.getElementById("lose");
+    perder.play();
+}
+function sonidoAyuda(){
+   	var  audioAyuda= document.getElementById("help");
+    audioAyuda.play();
 }

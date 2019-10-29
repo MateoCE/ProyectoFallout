@@ -19,14 +19,14 @@
 	?>
 </head>
 <body>
+	<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
 	<div class="screen">
 		<div id="bloqueP" class="letra">
 			Terminal Fallout
 		</div>
 		<div id="botones">
 			<button value="PLAY" onclick='play(); setTimeout(function(){location.href="dificultadHTML.php"},200);' class="letra boton">Jugar</button>
-			<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
-			<button onclick="location.href='ranking.php'" class="letra boton">Ranking</button>
+			<button onclick="play(); setTimeout(function(){location.href='ranking.php'},200);" class="letra boton">Ranking</button>
 		</div>
 	</div>
 	
