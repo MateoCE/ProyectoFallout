@@ -68,7 +68,7 @@
 	</div>
 	<div id="victoria" style="display: none">
 		<img class= "ocultar" src="resources/imagenes/gifVictoria.gif">
-		<form action=”ranking.php" method="post">
+		<form action="ranking.php" method="post">
 			<p class="ocultar">Introduce your name</p>
 			<input type="text" name="name" required autofocus>
 			<input type="hidden"  name="tries" id="tries">
