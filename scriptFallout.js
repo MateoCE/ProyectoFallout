@@ -135,9 +135,13 @@ function comprovarContrasena(palabra){
 			//Paramos interval(marcador) 
 			window.clearInterval(interval);
 			
-			//ejecutamos la funcion win que nos despliega el formulario para introducir el nombre
-			win();
-			
+			document.getElementById('contenedorPrincipal').innerHTML="";
+			document.getElementById('mainPalabras').innerHTML="";
+			document.getElementById('victoria').style.display="block";
+					
+			document.getElementById("tries").value = contadorVidas;
+			document.getElementById("time").value=puntuacionSegundos;
+			document.getElementById("gameMode").value= dificultad;
 			//nombreJugador=pedirNombre();
 
 		//Si no es la contraseña entramos
