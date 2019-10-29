@@ -20,7 +20,7 @@
 		  
 			$ranking = "resources/ranking/rankingEasy.txt";
 
-			if (isset($_GET["name"]) && isset($_GET["time"]) && isset($_GET["tries"]) && isset($_GET["gameMode" ]) {
+			if (!empty($_GET["name"]) && !empty($_GET["time"]) && !empty($_GET["tries"]) && !empty($_GET["gameMode" ]) {
 				$phpName = $_GET["name"];
 				$phpTime = $_GET["time"];
 				$phpTries = $_GET["tries"];
