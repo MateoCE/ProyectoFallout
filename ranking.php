@@ -48,7 +48,7 @@
 			}
 
 			$arrayJugadores=[];
-			$file = fopen($ranking, "r") or exit("Unable to open file!");
+			$file = fopen("ranking.txt", "r") or exit("Unable to open file!");
 			while(!feof($file))
 			{
 				$jugador = trim(fgets($file));
