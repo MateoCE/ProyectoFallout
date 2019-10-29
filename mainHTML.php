@@ -8,7 +8,7 @@
 <button onclick="daltonico()" id="daltonico">Colorblind: OFF</button>
 <div id="documento">
 	<div id="cascada" class="screen"></div>
-	<?phprequire 'mainPHP.php';?>
+	<!-- REQUIRE HERE -->
 	<div id="contenedorPrincipal">
 		<pre id="titulo" class="typing">
 		Welcome to ROBCO Industries (TM) Termlink</pre>
