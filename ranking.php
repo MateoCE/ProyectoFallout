@@ -20,6 +20,31 @@
 		  
 			$ranking = "resources/ranking/rankingEasy.txt";
 
+			if (isset($_GET["name"]) && isset($_GET["time"]) && isset($_GET["tries"]) && isset($_GET["gameMode" ]) {
+				$phpName = $_GET["name"];
+				$phpTime = $_GET["time"];
+				$phpTries = $_GET["tries"];
+				$phpGameMode = $_GET["gameMode"];
+ 
+				$variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
+				
+				if($phpGameMode == "Easy"){
+					
+					//file_put_contents("resources/ranking/rankingEasy.txt", $variables, FILE_APPEND | LOCK_EX);
+					$ranking = "resources/ranking/rankingEasy.txt";
+					
+				}elseif($phpGameMode == "Normal"){
+					
+					//file_put_contents("resources/ranking/rankingNormal.txt", $variables, FILE_APPEND | LOCK_EX);
+					$ranking = "resources/ranking/rankingNormal.txt";
+					
+				}elseif($phpGameMode == "Hard"){
+				
+					//file_put_contents("resources/ranking/rankingHard.txt", $variables, FILE_APPEND | LOCK_EX);
+					$ranking = "resources/ranking/rankingHard.txt";
+					
+				}
+}
 
 			$arrayJugadores=[];
 			$file = fopen($ranking, "r") or exit("Unable to open file!");
