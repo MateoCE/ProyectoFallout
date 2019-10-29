@@ -52,9 +52,16 @@
 			}
 		?>
 		</table>
+		<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
 		<div id="botones">
-			<button onclick="location.href='menuPrincipal.php'" class="letra boton">Menú principal</button>
+			<button onclick="play(); setTimeout(function(){location.href='menuPrincipal.php'},200);" class="letra boton">Menú principal</button>
 		</div>
 	</div>
 </body>
+<script type="text/javascript">
+		function play(){
+   		 var audio = document.getElementById("audio");
+    	audio.play();
+		}
+</script>
 </html>
