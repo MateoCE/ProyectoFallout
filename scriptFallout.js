@@ -1,10 +1,35 @@
 var contadorVidas=4;
+var dalt=0;
+var modoHardcore= false;
+var dificultad = document.getElementById("difficulty");
 
+if(document.getElementById("hardcore") != null){
+	
+	modoHardcore = true;
+	
+}
+
+function daltonico() {
+    if (dalt==0) {
+    	document.getElementById('documento').style.color = "white";
+    	document.getElementById('tiempo').style.color = "white";
+    	document.getElementById('daltonico').innerHTML = "Colorblind: ON";
+    	dalt+=1;
+    }else{
+    	document.getElementById('documento').style.color = "green";
+    	document.getElementById('tiempo').style.color = "green";
+    	document.getElementById('daltonico').innerHTML = "Colorblind: OFF";
+    	dalt-=1;
+    }
+}
+
+//Eliminar enviarDatos() y pedirNombre() si el juego funciona correctamente y tambien eliminar pedirNombre() en comprovarContrasena
 function enviarDatos() {
-	var jsName = nombreJugador;
-	var jsTime = puntuacionSegundos;
-	var jsTries = contadorVidas;
-	window.location.href = "menuPrincipal.php" + "?name=" + jsName + "&time=" + jsTime + "&tries=" + jsTries ;
+
+	// var jsName = nombreJugador;
+	// var jsTime = puntuacionSegundos;
+	// var jsTries = contadorVidas;
+	// window.location.href = "menuPrincipal.php" + "?name=" + jsName + "&time=" + jsTime + "&tries=" + jsTries ;
 }
 
 function pedirNombre(){
@@ -21,6 +46,26 @@ function irMenuPrincipal(){
 
 }
 
+function derrota(){
+
+	document.getElementById('contenedorPrincipal').innerHTML="";
+	document.getElementById('mainPalabras').innerHTML="";
+	document.getElementById('derrota').style.display="block";
+		
+}	
+
+function win(){
+
+	document.getElementById('contenedorPrincipal').innerHTML="";
+	document.getElementById('mainPalabras').innerHTML="";
+	document.getElementById('victoria').style.display="block";
+			
+	document.getElementById("tries").value = contadorVidas;
+	document.getElementById("time").value=puntuacionSegundos;
+	document.getElementById("gameMode").value= dificultad;
+	
+}
+
 function vidasRestantes(simbolo){
 	if(simbolo=="-"){
 		contadorVidas=contadorVidas-1;
@@ -28,9 +73,9 @@ function vidasRestantes(simbolo){
 				var Vidas=  "&block; ".repeat(contadorVidas);
 				document.getElementById('intentos').innerHTML = "Attempts Remaining: "+ Vidas;
 			}else{
-				document.getElementById('contenedorPrincipal').innerHTML="";
-				document.getElementById('mainPalabras').innerHTML="";
-				document.getElementById('derrota').style.display="block";
+				
+				derrota();
+				
 			}
 	}else if(simbolo=="+"){
 		var Vidas=  "&block; ".repeat(contadorVidas);
@@ -87,10 +132,13 @@ function comprovarContrasena(palabra){
 		//Comprobamos si es la contraseña
 		var contrasenaScript = document.getElementById('contrasena').innerHTML;
 		if(palabra==contrasenaScript){
-			document.getElementById('contenedorPrincipal').innerHTML="";
-			document.getElementById('mainPalabras').innerHTML="";
-			document.getElementById('victoria').style.display="block";
-			nombreJugador=pedirNombre();
+			//Paramos interval(marcador) 
+			window.clearInterval(interval);
+			
+			//ejecutamos la funcion win que nos despliega el formulario para introducir el nombre
+			win();
+			
+			//nombreJugador=pedirNombre();
 
 		//Si no es la contraseña entramos
 		}else{
@@ -133,14 +181,31 @@ function comprovarContrasena(palabra){
 	}
 }
 
+
+var contadorAyudaIntentos = 0;
+var contadorAyudaPalabras = 0;
+
 function ayudas(ayuda){
 	if (ayuda[0]!=".") {
-		if(Math.random()<0.5){
+		if(Math.random()<0.5 && contadorAyudaIntentos == 0){
+			
+			contadorAyudaIntentos +=1;
 			restablecerIntentos();
-		}else{
+		}else if(contadorAyudaPalabras == 0){
+			
+			contadorAyudaPalabras +=1;
 			console.log("eeeeeeeeeeee");
 			borrarPalabra();
-		}
+			
+		}else{
+		
+			if(Math.random()<0.5){
+				restablecerIntentos();
+			}else{
+				console.log("eeeeeeeeeeee");
+				borrarPalabra();
+			}	
+		}	
 
 		var strAyuda = document.getElementById(ayuda).innerHTML;
 		var strPuntos = "";
@@ -159,33 +224,37 @@ document.getElementById('bloquepalabras2').innerHTML=document.getElementById('bl
 document.getElementById('bloquepalabras2').innerHTML+=anadirFinal;
 
 
-var segundos = 0;
-var minutos = 0;
-var puntuacionSegundos = 0;
-var marcador = document.getElementById("tiempo");
-window.setInterval(function(){
-	puntuacionSegundos++;
- 	segundos++;
- 	if (segundos<10) {
- 		if (minutos<10) {
- 			marcador.innerHTML = "0"+minutos+":0"+segundos;
- 		}else{
-			marcador.innerHTML = minutos+":0"+segundos;
- 		}
- 	}else{
- 		if (minutos<10) {
- 			marcador.innerHTML = "0"+minutos+":"+segundos;
- 		}else{
-			marcador.innerHTML = minutos+":"+segundos;
- 		}
- 	}
- 	if (segundos==59) {
- 		minutos++;
- 		segundos=-1;
- 	}
-},1000);
-
-
+//Marcador empieza a contar desde el segundo 6
+window.setTimeout(timeGame, 6000);
+var puntuacionSegundos= 0;
+var interval;
+function timeGame () {
+	var segundos = 0;
+	var minutos = 0;
+	var marcador = document.getElementById("tiempo");
+	//Variable interval que al acertar la contraseña paramos
+	interval = window.setInterval(function(){
+		puntuacionSegundos++;
+	 	segundos++;
+	 	if (segundos<10) {
+	 		if (minutos<10) {
+	 			marcador.innerHTML = "0"+minutos+":0"+segundos;
+	 		}else{
+				marcador.innerHTML = minutos+":0"+segundos;
+	 		}
+	 	}else{
+	 		if (minutos<10) {
+	 			marcador.innerHTML = "0"+minutos+":"+segundos;
+	 		}else{
+				marcador.innerHTML = minutos+":"+segundos;
+	 		}
+	 	}
+	 	if (segundos==59) {
+	 		minutos++;
+	 		segundos=-1;
+	 	}
+	},1000);
+}
 function restablecerIntentos() {
         contadorVidas = 4;
         vidasRestantes("+");
@@ -195,4 +264,4 @@ function restablecerIntentos() {
 		document.getElementById('prompt2').innerHTML=document.getElementById('prompt1').innerHTML;
 		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded"+"<br/>"+">Restored lives<br/>";
         
-    }
+}

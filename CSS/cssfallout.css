@@ -5,11 +5,31 @@
 body {
 	background-color: #292003;
 	color: green;
-	background-image: url("../terminales/TerminalFallout.png");
+	background-image: url("../resources/imagenes/TerminalFallout.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+#daltonico{
+    position: absolute;
+    color:green;
+    padding: 5px;
+    font-weight: 700;
+    font-size: auto;
+    right: 9%;
+    width: 11%;
+    top:43%;
+    color: green;
+    background-color: black;
+    border-radius: 3px;
+    border: 6px solid green;
+}
+
+#daltonico:hover{
+  color:black;
+  background-color: green;
+}
+
 .prompt{
 	width: 170px;
 	height: 54px;
@@ -48,21 +68,70 @@ body {
 }
 #titulo{
 	position:absolute;
-	left: -6%;
-	top: 5%;
+	left: -8.5%;
+	top: 8%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
-	font-weight: 700;
+	font-weight: 700;   
 }
+#titulo2{
+	position:absolute;
+	left: 6%;
+	top: 16%;
+	font-family: Helvetica, sans-serif;
+	font-size: 13pt;
+	letter-spacing: 0.10em;
+	font-weight: 700;   
+}
+.typing, .typing2, .typing3{
+  overflow: hidden;
+  animation: typing 2s steps(500, end);
+  width: 0;
+  animation-fill-mode: forwards;
+}
+.typing{
+	animation-delay: 0s;
+}
+.typing2 {
+  	animation-delay: 1.6s;
+}
+.typing3 {
+  	animation-delay: 2.1s;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+#bloqueNegro{
+	background-color: black;
+	position: absolute;
+	right: 14%;
+	top: 33%;
+	width: 80%;
+	height: 55%;
+}
+ .typing4{
+ 	overflow: hidden;
+  	animation: typingC 4s steps(500, end);
+  	width: 0;
+  	animation-fill-mode: forwards;
+  	animation-delay: 3s;
+
+ }
+@keyframes typingC {
+  from { width:   80%; }
+  to { width:   0%; }
+} 
 #intentos{
 	position:absolute;
 	left: 6%;
-	top: 21%;
+	top: 23%;
 	font-family: Helvetica, sans-serif;
 	font-size: 13pt;
 	letter-spacing: 0.10em;
-
 	font-weight: 700;
 }
 #bloquepalabras1{
@@ -122,10 +191,23 @@ body {
 	height: 537px;
 	margin: 0 auto;
 }
+.botonContinuar{
+	color:green;
+	font-weight: 300;
+	font-size: 100%;
+	background-color: black;
+	border-radius: 3px;
+	border: 5px solid green;
+
+}
+.botonContinuar:hover{
+  color:black;
+  background-color: green;
+}
 
 @media only screen and (max-width: 600px) {
 	body{
-		background-image: url(../terminales/error404.jpg);
+		background-image: url(../resources/imagenes/error404.jpg);
 		background-size: cover;
 		color: black;
 
@@ -264,7 +346,7 @@ body {
 }
 @media (max-height: 359px){
 	body{
-		background-image: url(../terminales/error404.jpg);
+		background-image: url(../resources/imagenes/error404.jpg);
 		background-size: cover;
 		color: black;
 	}

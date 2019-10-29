@@ -24,9 +24,17 @@
 			Terminal Fallout
 		</div>
 		<div id="botones">
-			<button onclick="location.href='mainHTML.php'" class="letra boton">Jugar</button>
+			<button value="PLAY" onclick='play(); setTimeout(function(){location.href="dificultadHTML.php"},200);' class="letra boton">Jugar</button>
+			<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
 			<button onclick="location.href='ranking.php'" class="letra boton">Ranking</button>
 		</div>
 	</div>
+	
 </body>
+<script type="text/javascript">
+		function play(){
+   		 var audio = document.getElementById("audio");
+    	audio.play();
+		}
+	</script>
 </html>
