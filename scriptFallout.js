@@ -1,7 +1,7 @@
 var contadorVidas=4;
 var dalt=0;
 var modoHardcore= false;
-var dificultad = document.getElementById("difficulty");
+var dificultad = document.getElementById("difficulty").value;
 
 if(document.getElementById("hardcore") != null){
 	
