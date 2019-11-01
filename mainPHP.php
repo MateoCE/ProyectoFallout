@@ -13,21 +13,21 @@ if (isset($_GET["dificultad"])) {
     $numPalabras=6;
     $numAyudas=3;
     $file =fopen("resources/diccionarios/listaPalabrasFacil", "r");
-	echo "<input id='difficulty' type='hidden' value='easy'>";	
+	  echo "<input id='difficulty' type='hidden' value='easy'>";
 
   }elseif ($dificultad == "Normal") {
-    
+
     $numPalabras=10;
     $numAyudas=3;
     $file =fopen("resources/diccionarios/listaPalabrasMedio", "r");
-	echo "<input id='difficulty' type='hidden' value='normal'>";
-	
+	  echo "<input id='difficulty' type='hidden' value='normal'>";
+
   }elseif ($dificultad == "Hard") {
 
     $numPalabras=12;
     $numAyudas=1;
     $file =fopen("resources/diccionarios/listaPalabrasDificil", "r");
-	echo "<input id='difficulty' type='hidden' value='hard'>";
+	  echo "<input id='difficulty' type='hidden' value='hard'>";
 
   }
 }else{
@@ -40,9 +40,8 @@ if (isset($_GET["dificultad"])) {
 	if(isset($_GET["hardcore"])){
 
 		echo "<input id='hardcore' type='hidden' value='True'>";
-	
-	}
 
+	}
 
 //Leer archivo txt y guardar palabras en array.
 $diccionario = [];
@@ -54,7 +53,7 @@ while(!feof($file)){
 }
 fclose($file);
 
-//Seleccionamos 6 palabras aleatorias.
+//Seleccionamos las palabras aleatorias.
 $palabrasRandom = [];
 $contador=0;
 while ($contador<$numPalabras) {
@@ -69,7 +68,7 @@ $simbolos=[",", "`", "!", "@", "#", "$", "%", "^", "*", "?", "\\", "|", "/", ":"
 $simbolosOpertura = ["(", "[", "{"];
 $simbolosCierre = [")", "]", "}"];
 
-//6 posiciones aleatorias sin solapar
+//Seleccionamos las posiciones aleatorias sin solapar
 $contador=0;
 $listaPosiciones=[];
  while (count($listaPosiciones) < $numPalabras) {
@@ -100,8 +99,6 @@ while (count($arrayAyudas) < $numAyudas) {
 }
 
 
-
-
 $listaPosicionesAyudas=[];
 $index = 0;
 while (count($listaPosicionesAyudas) < $numAyudas) {
@@ -113,15 +110,15 @@ while (count($listaPosicionesAyudas) < $numAyudas) {
         $finalPos = ($filaRandom * 12)-8 + 2;
         array_push($filasOcupadas, $filaRandom);
         array_push($listaPosicionesAyudas, $finalPos);
-      }else{  
+      }else{
         $finalPos = $filaRandom * 12 + 2;
         array_push($filasOcupadas, $filaRandom);
         array_push($listaPosicionesAyudas, $finalPos);
       }
            $index++;
-      }  
+      }
     }
-       
+
 }
 
 //Creamos string con palabras, simbolos y ayudas
@@ -191,8 +188,6 @@ foreach($palabrasRandom as $palabra){
     $stringPrincipal = str_replace($palabra, "<span id='$palabra' onclick='comprovarContrasena(this.id)' class='palabras' style='color:blue'>$palabra</span>", $stringPrincipal);
   }
 }
-
-
 
 echo "<div id='mainPalabras'><div id='bloquepalabras1'>".$stringPrincipal."</div></div>";
 

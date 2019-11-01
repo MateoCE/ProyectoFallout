@@ -5,7 +5,11 @@
 <LINK REL=StyleSheet HREF="CSS/cssfallout.css" TYPE="text/css">
 </head>
 <body>
-<button onclick="daltonico()" id="daltonico">Colorblind: OFF</button>
+<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
+<audio id="win" src="resources/sonidos/kirby-victory.mp3"></audio>
+<audio id="lose" src="resources/sonidos/error-fallo-1.mp3"></audio>
+<audio id="help" src="resources/sonidos/mario-bros vida.mp3"></audio>
+<button onclick="play(); setTimeout(function(){daltonico()},200);" id="daltonico">Colorblind: OFF</button>
 <div id="documento">
 	<div id="cascada" class="screen"></div>
 	<?php
@@ -69,19 +73,12 @@
 	<div id="victoria" style="display: none">
 		<img class= "ocultar" src="resources/imagenes/gifVictoria.gif">
 		<form action="ranking.php" method="post">
-			<p class="ocultar">Introduce your name</p>
-			<input type="text" name="name" required autofocus>
+			<h3 class="ocultar">Introduce your name</h3>
+			<input type="text" name="name" required autofocus style="background-color: green;color: yellow;border: none;">
 			<input type="hidden"  name="tries" id="tries">
 			<input type="hidden" name="time" id="time">
 			<input type="hidden" name="gameMode" id="gameMode">
-			<input type="submit" class="ocultar" width="25%">
-		</form>
-		<!-- <button class= "ocultar" onclick="enviarDatos()">Continue</button> -->
-		
-	</div>
-	<div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/derrota.gif" style="width: 600px">
-		<button class= "ocultar" onclick="irMenuPrincipal()">Continue</button>
-	</div>
+			<input type="submit" class="ocultar" width="25%" style="background-color: green;color: black;border: none;">
 </div>
 <script type="text/javascript" src="scriptFallout.js"></script>
 </body>

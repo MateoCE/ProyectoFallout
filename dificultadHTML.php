@@ -10,7 +10,7 @@
 	    $phpName = $_GET["name"];
 	    $phpTime = $_GET["time"];
 	    $phpTries = $_GET["tries"];
-	 
+
 	    $variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
 
 	    file_put_contents("ranking.txt", $variables, FILE_APPEND | LOCK_EX);
@@ -19,18 +19,19 @@
 	?>
 </head>
 <body>
+	<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
 	<div class="screen">
 		<div id="volver">
-			<button onclick="location.href='menuPrincipal.php'" class="botonVolver">Volver</button>
+			<button onclick="play(); setTimeout(function(){location.href='menuPrincipal.php'},200);" class="botonVolver">Volver</button>
 		</div>
 		<div id="bloqueP" class="letra">
 			Dificultad
 		</div>
-		<form action="mainHTML.php" method="_GET">
+		<form id= formulario action="mainHTML.php" method="_GET">
 		<div id="botones">
-				<input type="submit" name="dificultad" value="Easy" class="letra boton"></input>
-				<input type="submit" name="dificultad" value="Normal" class="letra boton"></input>
-				<input type="submit" name="dificultad" value="Hard" class="letra boton"></input>		
+				<button name="dificultad" value="Easy" class="letra boton">Easy</button>
+				<button name="dificultad" value="Normal" class="letra boton">Normal</button>
+				<button name="dificultad" value="Hard" class="letra boton">Hard</button>
 		</div>
 		<div id="extremo">
 			<label><input type="checkbox" name="hardcore" >Activar modo extremo</label>
@@ -38,4 +39,21 @@
 		</form>
 	</div>
 </body>
+<script type="text/javascript">
+		var botones = document.getElementsByClassName("boton");
+		for (var i = 0; i < botones.length-1; i++) {
+			botones[i].addEventListener("click", function(event){
+				event.preventDefault();
+				var audio = document.getElementById("audio");
+    			audio.play();
+    			setTimeout(function(){
+    				document.getElementById("formulario").submit();
+    			},200)
+			})
+		}
+		function play(){
+   		 var audio = document.getElementById("audio");
+    	audio.play();
+		}
+	</script>
 </html>

@@ -8,6 +8,8 @@ tr:hover{
   color:black;
   background-color: green;
 }
+
+
 #bloqueP{
 	display: flex;
 	align-items: center;
@@ -18,31 +20,37 @@ tr:hover{
   font-size: 500%;
   text-shadow: 0 1px 0 black,
                 0 2px 0 black,
-                0 3px 0 black, 
-                0 4px 0 black, 
-                0 5px 0 black, 
-                0 6px 1px black, 
-                0 0 5px black, 
-                0 1px 3px black, 
-                0 3px 5px black, 
-                0 5px 10px black, 
+                0 3px 0 black,
+                0 4px 0 black,
+                0 5px 0 black,
+                0 6px 1px black,
+                0 0 5px black,
+                0 1px 3px black,
+                0 3px 5px black,
+                0 5px 10px black,
                 0 10px 10px black,
-                0 20px 20px black; 
+                0 20px 20px black;
 }
 
 #botones{
   display: flex;
   justify-content: center;
+  align: center;
   margin-top: 1%;
+  margin-bottom: 2%;
 }
+
 .boton{
-  padding: 10px;
+  display: inline-block;
   font-weight: 800;
   font-size: 200%;
   color: green;
   background-color: black;
   border-radius: 6px;
   border: 10px solid green;
+  padding: 10px;
+  margin: 0 15px;
+
 }
 
 .boton:hover{
@@ -51,6 +59,9 @@ tr:hover{
   border: 10px solid black;
 }
 
+.selected{
+  background-color: green; color:black; border: 10px solid black;
+}
 
 #players {
   border-collapse: collapse;
