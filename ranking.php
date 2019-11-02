@@ -6,6 +6,13 @@
 </head>
 <body>
 	<?php
+
+		session_start();
+
+		if (isset($_SESSION["game"])) {
+    unset($_SESSION["game"]);
+		}
+
 		if (isset($_POST['Hard'])) {
 			$ranking = "resources/ranking/rankingHard.txt";
 			$titulo = "Hard";
