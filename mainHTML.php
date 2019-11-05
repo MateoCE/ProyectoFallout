@@ -82,7 +82,7 @@
 			<input type="hidden" name="gameMode" id="gameMode">
 			<input type="submit" class="ocultar" width="25%" style="background-color: green;color: black;border: none;">
 </div>
-<div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/derrota.gif" style="width: 600px"><button class= "ocultar" onclick="irMenuPrincipal()">Continue</button></div>
+<div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/derrota.gif" style="width: 600px; height: 400px"><button class= "ocultar" onclick="irMenuPrincipal()" id="continue">Continue</button></div>
 <script type="text/javascript" src="scriptFallout.js"></script>
 </body>
 </html>
