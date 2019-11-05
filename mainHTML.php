@@ -10,6 +10,7 @@
 <audio id="lose" src="resources/sonidos/error-fallo-1.mp3"></audio>
 <audio id="help" src="resources/sonidos/mario-bros vida.mp3"></audio>
 <button onclick="play(); setTimeout(function(){daltonico()},200);" id="daltonico">Colorblind: OFF</button>
+<button onclick="disableMute()" type="button" id="btn">Sound: ON</button>
 <div id="documento">
 	<div id="cascada" class="screen"></div>
 	<?php

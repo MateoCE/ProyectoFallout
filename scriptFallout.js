@@ -248,19 +248,40 @@ function restablecerIntentos() {
 		document.getElementById('prompt1').innerHTML=">Help Level 1<br/>"+">Activaded"+"<br/>"+">Restored lives<br/>";
 
 }
+var audio = document.getElementById("audio");
+var  audioAyuda= document.getElementById("help");
+var victory = document.getElementById("win");
+var  perder= document.getElementById("lose");
+var  audioAyuda= document.getElementById("help");
+
 function play(){
-   	var audio = document.getElementById("audio");
     audio.play();
 }
 function victoria(){
-   	var victory = document.getElementById("win");
     victory.play();
 }
 function derrota(){
-   	var  perder= document.getElementById("lose");
+   
     perder.play();
 }
 function sonidoAyuda(){
-   	var  audioAyuda= document.getElementById("help");
     audioAyuda.play();
+}
+var Sonido = false;
+function disableMute(){
+    if(Sonido==false){
+        audio.muted = true;
+        audioAyuda.muted = true;
+        perder.muted = true;
+        victory.muted = true;
+        Sonido=true;
+        document.getElementById("btn").innerHTML="Sound: OFF";
+    }else if(Sonido==true){
+        audio.muted = false;
+        audioAyuda.muted = false;
+        perder.muted = false;
+        victory.muted = false;
+        Sonido=false;
+        document.getElementById("btn").innerHTML="Sound: ON";
+    }
 }
