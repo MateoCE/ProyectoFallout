@@ -10,7 +10,7 @@
 		session_start();
 
 		if (isset($_SESSION["game"])) {
-    unset($_SESSION["game"]);
+   			unset($_SESSION["game"]);
 		}
 
 		if (isset($_POST['Hard'])) {
@@ -36,6 +36,9 @@
 			$phpTime = $_POST["time"];
 			$phpTries = $_POST["tries"];
 			$phpGameMode = $_POST["gameMode"];
+
+
+			$_SESSION["nombre"]= $phpName;
 
 			$variables = $phpName . ";" . $phpTime . ";" . $phpTries . "\n";
 

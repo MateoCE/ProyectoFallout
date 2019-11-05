@@ -75,7 +75,12 @@
 		<form action="ranking.php" method="post">
 			<h3 class="ocultar">Introduce your name</h3>
 			<?php 
-			echo "<input type="text" name="name" required autofocus style="background-color: green;color: yellow;border: none;">";
+			if(isset($_SESSION["nombre"])){
+				$name = $_SESSION["nombre"];
+				echo "<input type='text' name='name' placeholder=\"$name\" required autofocus style='background-color: green;color: yellow;border: none;'>";
+			}else{
+				echo "<input type='text' name='name' required autofocus style='background-color: green;color: yellow;border: none;'>";
+			}
 			?>
 			<input type="hidden"  name="tries" id="tries">
 			<input type="hidden" name="time" id="time">
