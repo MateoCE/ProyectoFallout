@@ -75,7 +75,7 @@
 		<form action="ranking.php" method="post">
 			<h3 class="ocultar">Introduce your name</h3>
 			<?php 
-			echo "<input type="text" name="name" required autofocus style="background-color: green;color: yellow;border: none;">";
+			echo "<input type='text' name='name' required autofocus style='background-color: green;color: yellow;border: none;'>";
 			?>
 			<input type="hidden"  name="tries" id="tries">
 			<input type="hidden" name="time" id="time">
