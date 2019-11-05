@@ -1,5 +1,6 @@
 var contadorVidas=4;
 var dalt=0;
+var palabraAnterior = 0;
 var modoHardcore= false;
 var dificultad = document.getElementById("difficulty").value;
 
@@ -120,6 +121,19 @@ function comprovarContrasena(palabra){
 						contadorLetras+=1;
 					}
 				}
+
+				if(modoHardcore){
+
+					if(palabraAnterior<contadorLetras){
+
+						document.getElementById('contenedorPrincipal').innerHTML="";
+						document.getElementById('mainPalabras').innerHTML="";
+						document.getElementById('derrota').style.display="block";
+
+					}
+
+				}
+
 				//Actualizamos prompt con nombre de palabra clickada y coincidencias
 				document.getElementById('prompt5').innerHTML=document.getElementById('prompt4').innerHTML;
 				document.getElementById('prompt4').innerHTML=document.getElementById('prompt3').innerHTML;

@@ -74,7 +74,9 @@
 		<img class= "ocultar" src="resources/imagenes/gifVictoria.gif">
 		<form action="ranking.php" method="post">
 			<h3 class="ocultar">Introduce your name</h3>
-			<input type="text" name="name" required autofocus style="background-color: green;color: yellow;border: none;">
+			<?php 
+			echo "<input type="text" name="name" required autofocus style="background-color: green;color: yellow;border: none;">";
+			?>
 			<input type="hidden"  name="tries" id="tries">
 			<input type="hidden" name="time" id="time">
 			<input type="hidden" name="gameMode" id="gameMode">
