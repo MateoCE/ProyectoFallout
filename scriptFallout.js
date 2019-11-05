@@ -1,6 +1,6 @@
 var contadorVidas=4;
 var dalt=0;
-var palabraAnterior = 0;
+var palabraAnterior = 30;
 var modoHardcore= false;
 var dificultad = document.getElementById("difficulty").value;
 
@@ -122,7 +122,7 @@ function comprovarContrasena(palabra){
 					}
 				}
 
-				if(modoHardcore){
+				if(modoHardcore != null && modoHardcore != falses){
 
 					if(palabraAnterior<contadorLetras){
 
@@ -130,7 +130,9 @@ function comprovarContrasena(palabra){
 						document.getElementById('mainPalabras').innerHTML="";
 						document.getElementById('derrota').style.display="block";
 
+
 					}
+					palabraAnterior=contadorLetras;
 
 				}
 
