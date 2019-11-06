@@ -13,6 +13,8 @@
    			unset($_SESSION["game"]);
 		}
 
+
+
 		if (isset($_POST['Hard'])) {
 			$ranking = "resources/ranking/rankingHard.txt";
 			$titulo = "Hard";
@@ -25,13 +27,21 @@
 			$ranking = "resources/ranking/rankingEasy.txt";
 			$titulo = "Easy";
 		}else{
-			//$titulo = $_POST["gameMode"];
-			//$titulo  = ucfirst($titulo);
-			$ranking = "resources/ranking/rankingEasy.txt";
-			$titulo = "Easy";
+			if(isset($_POST["gameMode"])){
+				$dificultadTitulo = $_POST["gameMode"];
+				//$ranking = "resources/ranking/rankingHard.txt";
+				echo $dificultadTitulo;
+				$titulo = ucfirst($dificultadTitulo);
+			}else{
+				//$titulo = $_POST["gameMode"];
+				//$titulo  = ucfirst($titulo);
+				$ranking = "resources/ranking/rankingEasy.txt";
+				$titulo = "Easy";
+			}
+
 		}
 
-		if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode" ])) {
+		if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode"])) {
 			$phpName = $_POST["name"];
 			$phpTime = $_POST["time"];
 			$phpTries = $_POST["tries"];

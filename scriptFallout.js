@@ -122,7 +122,7 @@ function comprovarContrasena(palabra){
 					}
 				}
 
-				if(modoHardcore != null && modoHardcore != falses){
+				if(modoHardcore != null && modoHardcore != false){
 
 					if(palabraAnterior<contadorLetras){
 
@@ -263,7 +263,7 @@ function victoria(){
     victory.play();
 }
 function derrota(){
-   
+
     perder.play();
 }
 function sonidoAyuda(){

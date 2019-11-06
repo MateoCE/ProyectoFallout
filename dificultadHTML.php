@@ -45,7 +45,7 @@
 		</form>
 	</div>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 		var botones = document.getElementsByClassName("boton");
 		for (var i = 0; i < botones.length-1; i++) {
 			botones[i].addEventListener("click", function(event){
@@ -61,5 +61,5 @@
    		 var audio = document.getElementById("audio");
     	audio.play();
 		}
-	</script>
+	</script> -->
 </html>

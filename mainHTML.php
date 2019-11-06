@@ -75,7 +75,7 @@
 		<img class= "ocultar" src="resources/imagenes/gifVictoria.gif">
 		<form action="ranking.php" method="post">
 			<h3 class="ocultar">Introduce your name</h3>
-			<?php 
+			<?php
 			if(isset($_SESSION["nombre"])){
 				$name = $_SESSION["nombre"];
 				echo "<input type='text' name='name' placeholder=\"$name\" required autofocus style='background-color: green;color: yellow;border: none;'>";
@@ -87,6 +87,7 @@
 			<input type="hidden" name="time" id="time">
 			<input type="hidden" name="gameMode" id="gameMode">
 			<input type="submit" class="ocultar" width="25%" style="background-color: green;color: black;border: none;">
+		</form>
 </div>
 <div id="derrota" style="display: none"><img class= "ocultar" src="resources/imagenes/derrota.gif" style="width: 600px; height: 400px"><button class= "ocultar" onclick="irMenuPrincipal()" id="continue">Continue</button></div>
 <script type="text/javascript" src="scriptFallout.js"></script>
