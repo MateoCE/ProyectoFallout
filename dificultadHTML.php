@@ -28,10 +28,10 @@
 	<audio id="audio" src="resources/sonidos/boton_1.mp3"></audio>
 	<div class="screen">
 		<div id="volver">
-			<button onclick="play(); setTimeout(function(){location.href='menuPrincipal.php'},200);" class="botonVolver">Volver</button>
+			<button onclick="location.href='menuPrincipal.php'" class="botonVolver">Back</button>
 		</div>
 		<div id="bloqueP" class="letra">
-			Dificultad
+			Difficulty
 		</div>
 		<form id= formulario action="mainHTML.php" method="_GET">
 		<div id="botones">
@@ -40,7 +40,7 @@
 				<button name="dificultad" value="Hard" class="letra boton">Hard</button>
 		</div>
 		<div id="extremo">
-			<label><input type="checkbox" name="hardcore" >Activar modo extremo</label>
+			<label><input type="checkbox" name="hardcore" >Hardcore mode</label>
 		</div>
 		</form>
 	</div>
