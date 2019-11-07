@@ -12,6 +12,7 @@
 	<audio id="Game of thrones" src="resources/songs/Game of thrones.mp3"></audio>
 	<audio id="Batman" src="resources/songs/Batman.mp3"></audio>
 	<audio id="Jaws" src="resources/songs/Jaws.mp3"></audio>
+	<audio id="Star wars" src="resources/songs/Star wars.mp3"></audio>
 	<?php
 
 		session_start();
@@ -160,7 +161,7 @@
 </body>
 <script>
 var name = document.getElementById('nombre').value;
-var songs = ["Interstellar", "Game of thrones", "Jaws", "Batman", "Avengers", "Skyfall", "Rocky"];
+var songs = ["Interstellar", "Game of thrones", "Jaws", "Batman", "Avengers", "Skyfall", "Rocky", "Star wars"];
 
 if (songs.includes(name)) {
 	var audio= document.getElementById(name);
