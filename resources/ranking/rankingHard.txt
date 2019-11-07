@@ -1,0 +1,7 @@
+Joel;4;4
+Joel;32;4
+oscar;4;4
+mateo;4;4
+Mateo;4;4
+Mateo;3;4
+Rosalia;5;4

@@ -18,7 +18,7 @@ la distribución de las carpetas debe ser la siguiente:
 
 WINDOWS:
 
- xampp
+ xampp 
  
 	└───htdocs
 	

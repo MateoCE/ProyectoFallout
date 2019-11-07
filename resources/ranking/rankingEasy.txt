@@ -1,0 +1,4 @@
+Oscar;5;4
+Oscar;2;4
+tuker;4;4
+Mateo;2;4
