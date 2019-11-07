@@ -1,0 +1,19 @@
+Retrospectiva 3º sprint:
+
+¿Qué problemas tuvimos?
+
+-Al hacer todo en solo dos ramas tuvimos problemas al juntar código de cada uno en la misma rama.
+
+-Varias veces al poner nuevo código fallaba alguna funcionalidad del código anterior.
+
+¿Qué hicimos bien?
+
+-Al contrario del segundo sprint creo que mejoramos en concretar las horas de las especificaciones y trabajamos solo en casa para acabar pequeños detalles.
+
+¿Qué queremos mejorar?
+
+-La organización de ramas en GitHub y no trabajar solo en dos ramas.
+
+¿Qué vamos a hacer para conseguirlo?
+
+-Crear una rama por cada especificación.
