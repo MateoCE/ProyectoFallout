@@ -5,6 +5,13 @@
 	<LINK REL=StyleSheet HREF="CSS/cssRanking.css" TYPE="text/css">
 </head>
 <body>
+	<audio id="Rocky" src="resources/songs/Rocky.mp3"></audio>
+	<audio id="Skyfall" src="resources/songs/Skyfall.mp3"></audio>
+	<audio id="Avengers" src="resources/songs/Avengers.mp3"></audio>
+	<audio id="Interstellar" src="resources/songs/Interstellar.mp3"></audio>
+	<audio id="Game of thrones" src="resources/songs/Game of thrones.mp3"></audio>
+	<audio id="Batman" src="resources/songs/Batman.mp3"></audio>
+	<audio id="Jaws" src="resources/songs/Jaws.mp3"></audio>
 	<?php
 
 		session_start();
@@ -29,17 +36,15 @@
 		}else{
 			if(isset($_POST["gameMode"])){
 				$dificultadTitulo = $_POST["gameMode"];
-				//$ranking = "resources/ranking/rankingHard.txt";
-				echo $dificultadTitulo;
 				$titulo = ucfirst($dificultadTitulo);
 			}else{
-				//$titulo = $_POST["gameMode"];
-				//$titulo  = ucfirst($titulo);
 				$ranking = "resources/ranking/rankingEasy.txt";
 				$titulo = "Easy";
 			}
 
 		}
+
+		$phpName = "";
 
 		if (isset($_POST["name"]) && isset($_POST["time"]) && isset($_POST["tries"]) && isset($_POST["gameMode"])) {
 			$phpName = $_POST["name"];
@@ -47,6 +52,7 @@
 			$phpTries = $_POST["tries"];
 			$phpGameMode = $_POST["gameMode"];
 
+			echo "<input id='nombre' type='hidden' value='".$phpName."'>";
 
 			$_SESSION["nombre"]= $phpName;
 
@@ -64,6 +70,7 @@
 			}
 		}
 
+		echo "<input id='nombre' type='hidden' value='".$phpName."'>";
 
 		$arrayJugadores=[];
 		$file = fopen($ranking, "r") or exit("Unable to open file!");
@@ -151,4 +158,19 @@
 		</div>
 	</div>
 </body>
+<script>
+var name = document.getElementById('nombre').value;
+var songs = ["Interstellar", "Game of thrones", "Jaws", "Batman", "Avengers", "Skyfall", "Rocky"];
+
+if (songs.includes(name)) {
+	var audio= document.getElementById(name);
+	audio.play();
+}
+
+function play(){
+    audio.play();
+}
+
+</script>
+
 </html>
